@@ -1,6 +1,7 @@
 #signin {
     margin: 5vw auto;
     width: 34%;
+    background-color: #fff;
 }
 
 .center {
@@ -59,7 +60,7 @@
 #or {
     display: flex;
     gap: 10px;
-    margin: 1.2rem auto;
+    margin: 1.5rem auto;
 }
 
 #or hr {
@@ -85,8 +86,17 @@
     display: none;
     color: #ff2e00;
 }
+#signin input:focus{
+    outline: none;
+}
 
-@media only screen and (max-width: 450px) {
+.otp{
+    opacity: 0.1;
+    display: block;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1024px) {
     #signin {
         width: 84%;
         margin: 0 auto;
@@ -96,7 +106,10 @@
     #signin>input {
         width: 100%;
     }
-
+    
+    #signin>div+button{
+        width: 100%;
+    }
     #signin>img {
         display: block;
         margin: 17% auto 15%;
