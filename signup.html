@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC SIGN IN</title>
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="signin">
+        <p class="center">Sign In / Sign Up</p>
+        <img class="center" src="KFC_logo.svg" alt="Brand logo">
+        <h2 class="center">LET'S SIGN IN OR CREATE ACCOUNT WITH YOUR PHONE NUMBER!</h2>
+        <input type="text"  placeholder="Enter Your Name*" id="name">
+        <input type="tel" placeholder="Phone Number*" maxlength="10" id="phone">
+        <p>Please enter valid 10-digit mobile number</p>
+        <p id="tc">
+            By “logging in to KFC”, you agree to our <a href=""> Privacy Policy</a> and
+            <a href=""> Terms & Conditions.</a>
+        </p>
+        <button type="button" class="center">Send Me a Code</button>
+        <div id="or">
+            <hr>
+            or
+            <hr>
+        </div>
+        <button type="button" class="center">Skip, Continue As Guest</button>
+    </div>
+
+</body>
+<script>
+
+    //Guest User
+    document.getElementById("signin").getElementsByTagName("button")[1].addEventListener("click", function () {
+        event.preventDefault();
+        window.location.href = "http://www.w3schools.com";
+    })
+
+    // input field restriction
+    document.getElementById("signin").getElementsByTagName("input")[1].addEventListener("input",function(){
+        event.preventDefault();
+        var mob = document.getElementById("phone").value;
+        if(mob.length>0 && mob.length<10){
+            document.getElementById("signin").getElementsByTagName("p")[1].style.display="block";
+        }
+        else{
+            document.getElementById("signin").getElementsByTagName("p")[1].style.display="none";
+        }
+    })
+
+    // send code
+    document.getElementById("signin").getElementsByTagName("button")[0].addEventListener("click", function () {
+        event.preventDefault();
+        var mob = document.getElementById("phone").value;
+        if(mob[0]==0 || !Number(mob)){
+            document.getElementById("signin").getElementsByTagName("p")[1].style.display="block";
+            return;
+        }
+        var user = {
+            name : document.getElementById("name").value,
+            phone : document.getElementById("phone").value
+        }
+        //console.log(typeof obj.name+"  "+obj.phone )
+        localStorage.setItem("username",JSON.stringify(user));
+        localStorage.setItem("attempt",0);
+        window.location.href = "verify.html";
+    })
+
+
+    
+</script>
+
+</html>
