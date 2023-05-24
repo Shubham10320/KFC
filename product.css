@@ -1,10 +1,18 @@
- #main {
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&family=Tilt+Prism&display=swap');
+
+#main {
      width: 80%;
-     /* border: 3px solid crimson; */
+     font-family:league system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
      display: flex;
      margin: auto;
      position: relative;
      min-height: 100vh;
+     background-color: white;
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
  }
 
  #main>#left {
@@ -12,95 +20,454 @@
      /* border: 3px solid green; */
      position: fixed;
  }
- #left img{
-    display: block;
-    margin-left: 12px;
+
+ #left img {
+     display: block;
+     margin-left: 12px;
  }
- #main>#left h1{
-    margin-left: 12px;
+
+ #main>#left h1 {
+     margin-left: 12px;
+     margin-bottom: 30px;
  }
- #main>#left p{
-    font-size: 17px;
-    margin-bottom: 20px;
-    color: #414140;
-    cursor: pointer;
+
+ #main>#left p {
+     font-size: 17px;
+     margin-bottom: 20px;
+     color: #353534;
+     cursor: pointer;
  }
+
+
  #main>#right {
-     width: 90%;
+     width: 100%;
      /* border: 3px solid yellow; */
      margin-left: 320px;
  }
- #right>div{
-    border-radius: 8px;
+
+ #right>div {
+     border-radius: 8px;
  }
- #right>div h1{
-    margin-left: 20px;
+
+ #right>div h1 {
+     margin-left: 20px;
  }
- #right>#searchDiv{
-    margin-left: 30px;
-    align-items: center;
-    margin-top: 30px;
+
+ #right>#searchDiv {
+     margin-left: 30px;
+     align-items: center;
+     margin-top: 80px;
  }
- #right>#searchDiv span{
-    border: 2px solid gray;
-    border-radius: 30px;
-    padding: 12px;
-    margin-left: 5px;
+
+ #right>#searchDiv span {
+     border: 2px solid gray;
+     border-radius: 30px;
+     padding: 12px;
+     margin-left: 5px;
  }
- #right>#searchDiv input{
-    border: none;
-    width: 10rem;
-    margin-bottom: 10px;
-    padding: 10px;
+
+ #right>#searchDiv input {
+     border: none;
+     width: 10rem;
+     margin-bottom: 10px;
+     padding: 10px;
  }
 
 
- #right>#searchDiv #shubhamHR{
-    width: 100%;
-    border: 1px solid black;
+ #right>#searchDiv #shubhamHR {
+     width: 100%;
+     border: 1px solid black;
  }
-.shubhambox{
-    width: 100%;
-    /* border: 5px solid crimson; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    background-color: #f8f7f5;
-    padding: 20px;
-}
-.shubhambox div{
-    /* border: 3px solid blue; */
-    color: #414140;
-    font-weight: 400;
-    border-radius: 10px;
-    background-color:white;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-}
-.shubhambox div img{
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-}
-.shubhambox div #shubhamprice{
-    padding-left: 20px;
-    margin-top: -5px;
-    margin-bottom: -5px;
-    font-size: 20px;
-    color: red;
-    font-family: bold;
-}
-.shubhambox div>h4,p{
-    padding-left: 20px;
-}
-.shubhambox div>.Button{
-    margin: auto;
-    padding: 12px;
-    background-color: red;
-    border: none;
-    color: white;
-    font-weight:bold ;
+
+ .shubhambox {
+     width: 100%;
+     /* border: 5px solid crimson; */
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     background-color: #f8f7f5;
+     padding: 20px;
+ }
+
+ .shubhambox div {
+     /* border: 3px solid blue; */
+     color: #414140;
+     font-weight: 400;
+     border-radius: 10px;
+     background-color: white;
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+ }
+
+ .shubhambox div img {
+     width: 100%;
+     border-radius: 10px 10px 0 0;
+ }
+
+ .shubhambox div #shubhamprice {
+     padding-left: 20px;
+     margin-top: 6px;
+    margin-bottom: 6px; 
+     font-size: 20px;
+     color: red;
+     font-family: bold;
+ }
+ .shubhambox div #shubhamprice~p{
     font-size: 12px;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 18px;
-    width: 10rem;
+ }
+ .shubhambox div>h4,
+ p {
+     padding-left: 20px;
+     padding-right: 20px;
+     margin-bottom: 5px;
+ }
+
+ .shubhambox div>.Button {
+     margin: auto;
+     padding: 12px;
+     background-color: red;
+     border: none;
+     color: white;
+     font-weight: bold;
+     font-size: 12px;
+     display: block;
+     margin-bottom: 10px;
+     border-radius: 18px;
+     width: 10rem;
+     margin-top: 8px;
+ }
+
+.popup{
+    width: 500px;
+    height: 120px;
+    display: none;
+    position: fixed;
+    left: 40%;
+    top: 50%;
+    background-color:#1e1e1d ;
+}
+.popup p{
+     text-align: center;
+     margin-top: 50px;
+     font-size: 30px;
+     font-weight: bold;
+     color: white;
+
+}
+
+
+
+
+ @media only screen and (min-width: 499px) and (max-width:1024px) {
+    
+     #main {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         margin: auto;
+         padding: 0;
+     }
+
+     #main>#left {
+         width: 100%;
+         display: flex;
+         gap: 10px;
+         overflow-x:scroll;
+         margin: auto;
+         align-items: center;
+         text-align: center;
+         height: 12vh;
+         background-color: #fefbfb;
+         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+         margin-bottom: 30px;
+     }
+
+     #left img {
+         display: block;
+         margin-top: -50px;
+         margin-right: 20px;
+     }
+
+     #main>#left h1 {
+         display: none;
+     }
+
+     #main>#left p {
+         padding: 12px;
+         font-size: 15px;
+         color: #414140;
+         cursor: pointer;
+         padding-left: 50px;
+         padding-right: 50px;
+         padding-top: 30px;
+     }
+
+     #main>#right {
+         width: 80%;
+         margin: auto;
+     }
+     #main>#right h1 {
+         font-size: 30px;
+         color: #494949;
+     }
+
+     .shubhambox {
+         width: 100%;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 30px;
+         background-color: #f8f7f5;
+         padding: 20px;
+     }
+
+     #right>#searchDiv {
+         margin-left: 30px;
+         align-items: center;
+         margin-top: 110px;
+     }
+
+     #right>#searchDiv span {
+         border: 2px solid rgb(95, 93, 93);
+         border-radius: 50px;
+         padding: 12px;
+         margin-left: 5px;
+     }
+
+     #right>#searchDiv input {
+         border: none;
+         width: 10rem;
+         margin-bottom: 30px;
+         padding: 10px;
+         font-size: 14px;
+     }
+
+     .shubhambox div {
+         color: #414140;
+         font-weight: 400;
+         border-radius: 10px;
+         font-size: 18px;
+         background-color: white;
+         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+     }
+
+     .shubhambox div #shubhamprice {
+         padding-left: 20px;
+         margin-top: 8px;
+         margin-bottom: 8px;
+         font-size: 25px;
+         color: red;
+         font-family: bold;
+     }
+     #shubhamprice+P{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -.1px;
+        color: #494949;
+    
+     }
+
+     .shubhambox div>h4,
+     p {
+         padding-left: 20px;
+         margin-bottom: 10px;
+     }
+     .shubhambox div>.Button {
+        margin: auto;
+        padding: 12px;
+        background-color: red;
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        display: block;
+        border-radius: 18px;
+        margin-top:10px ;
+        width: 12rem;
+        margin-bottom: 10px;
+    }
+    #right>#searchDiv #shubhamHR {
+        width: 100%;
+        border: 1px solid #353534;
+        margin-top: -10px;
+    }
+    .popup p{
+        text-align: center;
+        margin-top: 33px;
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+   
+   }
+   .popup{
+    width: 400px;
+    height: 100px;
+    display: none;
+    position: fixed;
+    left: 20%;
+    top: 50%;
+    background-color:#1e1e1d ;
+}
+ }
+
+
+
+
+
+
+
+
+
+ @media only screen and (min-width: 299px) and (max-width:499px) {
+    
+    #main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #main>#left {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        overflow-x:scroll;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        height: 12vh;
+        background-color: #fefbfb;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        margin-bottom: 30px;
+    }
+
+    #left img {
+        display: block;
+        margin-top: -50px;
+        margin-right: 20px;
+        width: 140px;
+    }
+
+    #main>#left h1 {
+        display: none;
+    }
+
+    #main>#left p {
+        padding: 12px;
+        font-size: 12px;
+        color: #414140;
+        cursor: pointer;
+        padding-left: 50px;
+        padding-top: 30px;
+    }
+
+    #main>#right {
+        width: 80%;
+        margin: auto;
+    }
+    #main>#right h1 {
+        font-size: 25px;
+        color: #494949;
+        margin-top: 30px;
+    }
+
+    .shubhambox {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: #f8f7f5;
+        padding: 20px;
+        justify-content:center;
+    }
+
+    #right>#searchDiv {
+        margin-left: 30px;
+        align-items: center;
+        margin-top: 110px;
+        display: none;
+    }
+
+    /* #right>#searchDiv span {
+        border: 2px solid rgb(95, 93, 93);
+        border-radius: 50px;
+        padding: 12px;
+        margin-left: 5px;
+    }
+
+    #right>#searchDiv input {
+        border: none;
+        width: 10rem;
+        margin-bottom: 30px;
+        padding: 10px;
+        font-size: 14px;
+    } */
+
+    .shubhambox div {
+        color: #414140;
+        font-weight: 400;
+        border-radius: 10px;
+        font-size: 18px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+
+    .shubhambox div #shubhamprice {
+        padding-left: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 25px;
+        color: red;
+        font-family: bold;
+    }
+    #shubhamprice+P{
+       font-style: normal;
+       font-weight: 400;
+       font-size: 14px;
+       line-height: 24px;
+       letter-spacing: -.1px;
+       color: #494949;
+   
+    }
+
+    .shubhambox div>h4,
+    p {
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .shubhambox div>.Button {
+       margin: auto;
+       padding: 12px;
+       background-color: red;
+       border: none;
+       color: white;
+       font-weight: bold;
+       font-size: 14px;
+       display: block;
+       border-radius: 18px;
+       margin-top:10px ;
+       width: 10rem;
+       margin-bottom: 10px;
+   }
+   #right>#searchDiv #shubhamHR {
+       width: 100%;
+       border: 1px solid #353534;
+       margin-top: -10px;
+   }
+   .popup p{
+    text-align: center;
+    margin-top: 33px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+
+}
+.popup{
+width: 300px;
+height: 80px;
+display: none;
+position: fixed;
+left: 10%;
+top: 50%;
+background-color:#1e1e1d ;
+}
 }

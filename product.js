@@ -71,61 +71,43 @@ match_day.forEach((elem) => {
     let des = document.createElement("p");
     des.innerText = elem.des;
 
-    let button = document.createElement("button");
-    button.setAttribute("class", "Button");
-    button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+    let button1 = document.createElement("button");
+    button1.setAttribute("class", "Button");
+    button1.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
 
-    box.append(img, name, type, price, des, button);
+    box.append(img, name, type, price, des, button1);
     document.getElementById("product_match").append(box);
 
-    button.addEventListener("click", function () {
-        addtocart(elem);
+    button1.addEventListener("click", function () {
+        addtocart1(elem);
     })
 })
+let cartItem1=JSON.parse(localStorage.getItem('cartItems1')) || []
+function addtocart1(elem){
+     cartItem1.push(elem)
+     localStorage.setItem('cartItems1', JSON.stringify(cartItem1));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
 document.getElementById("match").addEventListener("click", function () {
     matchdiv();
 })
 function matchdiv() {
     window.location = "#matchday";
-    document.getElementById("match").style.fontWeight = 'bold'
-    document.getElementById("match").style.fontSize = '18px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
     document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+    document.getElementById("match").style.fontWeight = 'bold'
+    document.getElementById("periperi").style.fontWeight = 'normal'
+    document.getElementById("deal").style.fontWeight = 'normal'
+    document.getElementById("legpiece").style.fontWeight = 'normal'
+    document.getElementById("chickenbucket").style.fontWeight = 'normal'
+    document.getElementById("rolls").style.fontWeight = 'normal'
+    document.getElementById("launch").style.fontWeight = 'normal'
+    document.getElementById("biryanibucket").style.fontWeight = 'normal'
+    document.getElementById("boxmeal").style.fontWeight = 'normal'
+    document.getElementById("burgers").style.fontWeight = 'normal'
+    document.getElementById("snacks").style.fontWeight = 'normal'
 }
 
 // ====================================================================
@@ -193,61 +175,42 @@ periperi.forEach(function (elem) {
     let des = document.createElement("p");
     des.innerText = elem.des;
 
-    let button = document.createElement("button");
-    button.setAttribute("class", "Button");
-    button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+    let button2 = document.createElement("button");
+    button2.setAttribute("class", "Button");
+    button2.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
 
-    box.append(img, name, type, price, des, button);
+    box.append(img, name, type, price, des, button2);
     document.getElementById("periperiproduct").append(box);
 
-    button.addEventListener("click", function () {
-        addtocart(elem);
+    button2.addEventListener("click", function () {
+        addtocart2(elem);
     })
 })
-
+let cartItem2=JSON.parse(localStorage.getItem('cartItems2')) || []
+function addtocart2(elem){
+     cartItem2.push(elem)
+     localStorage.setItem('cartItems2', JSON.stringify(cartItem2));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 document.getElementById("periperi").addEventListener("click", function () {
     periperidiv();
 })
 function periperidiv() {
     window.location = "#periperiday";
-    document.getElementById("periperi").style.fontWeight = 'bold'
-    document.getElementById("periperi").style.fontSize = '20px'
-
-    document.getElementById("match").style.fontWeight = 'normal'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
     document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'bold'
+           document.getElementById("deal").style.fontWeight = 'normal'
+           document.getElementById("legpiece").style.fontWeight = 'normal'
+           document.getElementById("chickenbucket").style.fontWeight = 'normal'
+           document.getElementById("rolls").style.fontWeight = 'normal'
+           document.getElementById("launch").style.fontWeight = 'normal'
+           document.getElementById("biryanibucket").style.fontWeight = 'normal'
+           document.getElementById("boxmeal").style.fontWeight = 'normal'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
 }
 
 // ====================================================================
@@ -290,17 +253,25 @@ exclusiveDeal.forEach(function (elem) {
     let des = document.createElement("p");
     des.innerText = elem.des;
 
-    let button = document.createElement("button");
-    button.setAttribute("class", "Button");
-    button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+    let button3 = document.createElement("button");
+    button3.setAttribute("class", "Button");
+    button3.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
 
-    box.append(img, name, type, price, des, button);
+    box.append(img, name, type, price, des, button3);
     document.getElementById("dealproduct").append(box);
 
-    button.addEventListener("click", function () {
-        addtocart(elem);
+    button3.addEventListener("click", function () {
+        addtocart3(elem);
     })
 })
+let cartItem3=JSON.parse(localStorage.getItem('cartItems3')) || []
+function addtocart3(elem){
+     cartItem3.push(elem)
+     localStorage.setItem('cartItems3', JSON.stringify(cartItem3));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
 document.getElementById("deal").addEventListener("click", function () {
     dealdiv();
@@ -308,44 +279,18 @@ document.getElementById("deal").addEventListener("click", function () {
 
 function dealdiv() {
     window.location = "#dealday";
-    document.getElementById("deal").style.fontWeight = 'bold'
-    document.getElementById("deal").style.fontSize = '20px'
-
-     document.getElementById("match").style.fontWeight = 'normal'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
     document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'normal'
+           document.getElementById("deal").style.fontWeight = 'bold'
+           document.getElementById("legpiece").style.fontWeight = 'normal'
+           document.getElementById("chickenbucket").style.fontWeight = 'normal'
+           document.getElementById("rolls").style.fontWeight = 'normal'
+           document.getElementById("launch").style.fontWeight = 'normal'
+           document.getElementById("biryanibucket").style.fontWeight = 'normal'
+           document.getElementById("boxmeal").style.fontWeight = 'normal'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
 }
 
 // ====================================================================
@@ -470,17 +415,25 @@ chicken_bucket.forEach(function (elem) {
     let des = document.createElement("p");
     des.innerText = elem.des;
 
-    let button = document.createElement("button");
-    button.setAttribute("class", "Button");
-    button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+    let button4 = document.createElement("button");
+    button4.setAttribute("class", "Button");
+    button4.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
 
-    box.append(img, name, type, price, des, button);
+    box.append(img, name, type, price, des, button4);
     document.getElementById("chickenbucketproduct").append(box);
 
-    button.addEventListener("click", function () {
-        addtocart(elem);
+    button4.addEventListener("click", function () {
+        addtocart4(elem);
     })
 })
+let cartItem4=JSON.parse(localStorage.getItem('cartItems4')) || []
+function addtocart4(elem){
+     cartItem4.push(elem)
+     localStorage.setItem('cartItems4', JSON.stringify(cartItem4));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
 document.getElementById("chickenbucket").addEventListener("click", function () {
     chickendiv();
@@ -488,44 +441,18 @@ document.getElementById("chickenbucket").addEventListener("click", function () {
 
 function chickendiv() {
     window.location = "#chickenbucketday";
-    document.getElementById("chickenbucket").style.fontWeight = 'bold'
-    document.getElementById("chickenbucket").style.fontSize = '20px'
-
-     document.getElementById("match").style.fontWeight = 'noraml'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
     document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'normal'
+           document.getElementById("deal").style.fontWeight = 'normal'
+           document.getElementById("legpiece").style.fontWeight = 'normal'
+           document.getElementById("chickenbucket").style.fontWeight = 'bold'
+           document.getElementById("rolls").style.fontWeight = 'normal'
+           document.getElementById("launch").style.fontWeight = 'normal'
+           document.getElementById("biryanibucket").style.fontWeight = 'normal'
+           document.getElementById("boxmeal").style.fontWeight = 'normal'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
 }
 // ====================================================================
 
@@ -596,61 +523,43 @@ leg_Piece.forEach(function (elem) {
     let des = document.createElement("p");
     des.innerText = elem.des;
 
-    let button = document.createElement("button");
-    button.setAttribute("class", "Button");
-    button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+    let button5 = document.createElement("button");
+    button5.setAttribute("class", "Button");
+    button5.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
 
-    box.append(img, name, type, price, des, button);
+    box.append(img, name, type, price, des, button5);
     document.getElementById("legpieceproduct").append(box);
 
-    button.addEventListener("click", function () {
-        addtocart(elem);
+    button5.addEventListener("click", function () {
+        addtocart5(elem);
     })
 })
+let cartItem5=JSON.parse(localStorage.getItem('cartItems5')) || []
+function addtocart5(elem){
+     cartItem5.push(elem)
+     localStorage.setItem('cartItems5', JSON.stringify(cartItem5));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
 document.getElementById("legpiece").addEventListener("click", function () {
     legdiv();
 })
 function legdiv() {
     window.location = "#legpieceday";
-    document.getElementById("legpiece").style.fontWeight = 'bold'
-    document.getElementById("legpiece").style.fontSize = '20px'
-
-     document.getElementById("match").style.fontWeight = 'normal'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
     document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'normal'
+           document.getElementById("deal").style.fontWeight = 'normal'
+           document.getElementById("legpiece").style.fontWeight = 'bold'
+           document.getElementById("chickenbucket").style.fontWeight = 'normal'
+           document.getElementById("rolls").style.fontWeight = 'normal'
+           document.getElementById("launch").style.fontWeight = 'normal'
+           document.getElementById("biryanibucket").style.fontWeight = 'normal'
+           document.getElementById("boxmeal").style.fontWeight = 'normal'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
 }
 
 
@@ -727,17 +636,25 @@ let roll = [
         let des = document.createElement("p");
         des.innerText = elem.des;
     
-        let button = document.createElement("button");
-        button.setAttribute("class", "Button");
-        button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+        let button6 = document.createElement("button");
+        button6.setAttribute("class", "Button");
+        button6.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
     
-        box.append(img, name, type, price, des, button);
+        box.append(img, name, type, price, des, button6);
         document.getElementById("rollproduct").append(box);
     
-        button.addEventListener("click", function () {
-            addtocart(elem);
+        button6.addEventListener("click", function () {
+            addtocart6(elem);
         })
     })
+    let cartItem6=JSON.parse(localStorage.getItem('cartItems6')) || []
+function addtocart6(elem){
+     cartItem6.push(elem)
+     localStorage.setItem('cartItems6', JSON.stringify(cartItem6));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
 
     document.getElementById("rolls").addEventListener("click", function () {
@@ -745,44 +662,18 @@ let roll = [
     })
     function rolldiv() {
         window.location = "#rollsday";
-        document.getElementById("rolls").style.fontWeight = 'bold'
-        document.getElementById("rolls").style.fontSize = '20px'
-
-    document.getElementById("match").style.fontWeight = 'noraml'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
-    document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+        document.getElementById("beverages").style.fontWeight = 'normal'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'normal'
+           document.getElementById("deal").style.fontWeight = 'normal'
+           document.getElementById("legpiece").style.fontWeight = 'normal'
+           document.getElementById("chickenbucket").style.fontWeight = 'normal'
+           document.getElementById("rolls").style.fontWeight = 'bold'
+           document.getElementById("launch").style.fontWeight = 'normal'
+           document.getElementById("biryanibucket").style.fontWeight = 'normal'
+           document.getElementById("boxmeal").style.fontWeight = 'normal'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
     }
 
 // ====================================================================
@@ -844,17 +735,25 @@ let roll = [
         let des = document.createElement("p");
         des.innerText = elem.des;
     
-        let button = document.createElement("button");
-        button.setAttribute("class", "Button");
-        button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+        let button7 = document.createElement("button");
+        button7.setAttribute("class", "Button");
+        button7.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
     
-        box.append(img, name, type, price, des, button);
+        box.append(img, name, type, price, des, button7);
         document.getElementById("launchproduct").append(box);
     
-        button.addEventListener("click", function () {
-            addtocart(elem);
+        button7.addEventListener("click", function () {
+            addtocart7(elem);
         })
     })
+    let cartItem7=JSON.parse(localStorage.getItem('cartItems7')) || []
+    function addtocart7(elem){
+         cartItem7.push(elem)
+         localStorage.setItem('cartItems7', JSON.stringify(cartItem7));
+         setTimeout(function(){
+            document.querySelector('.popup').style.display='block'
+         },0)  
+    }
 
 
     document.getElementById("launch").addEventListener("click", function () {
@@ -862,44 +761,18 @@ let roll = [
     })
     function lunchdiv() {
         window.location = "#launchday";
-        document.getElementById("launch").style.fontWeight = 'bold'
-        document.getElementById("launch").style.fontSize = '20px'
-
-         document.getElementById("match").style.fontWeight = 'noraml'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
-    document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+        document.getElementById("beverages").style.fontWeight = 'normal'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'normal'
+           document.getElementById("deal").style.fontWeight = 'normal'
+           document.getElementById("legpiece").style.fontWeight = 'normal'
+           document.getElementById("chickenbucket").style.fontWeight = 'normal'
+           document.getElementById("rolls").style.fontWeight = 'normal'
+           document.getElementById("launch").style.fontWeight = 'bold'
+           document.getElementById("biryanibucket").style.fontWeight = 'normal'
+           document.getElementById("boxmeal").style.fontWeight = 'normal'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
     }
 
 // ====================================================================
@@ -1001,17 +874,25 @@ let roll = [
             des.innerText = elem.des;
             
         
-            let button = document.createElement("button");
-            button.setAttribute("class", "Button");
-            button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+            let button8 = document.createElement("button");
+            button8.setAttribute("class", "Button");
+            button8.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
         
-            box.append(img, name, type, price, des, button);
+            box.append(img, name, type, price, des, button8);
             document.getElementById("biryanibucketproduct").append(box);
         
-            button.addEventListener("click", function () {
-                addtocart(elem);
+            button8.addEventListener("click", function () {
+                addtocart8(elem);
             })
         })
+        let cartItem8=JSON.parse(localStorage.getItem('cartItems8')) || []
+        function addtocart8(elem){
+             cartItem8.push(elem)
+             localStorage.setItem('cartItems8', JSON.stringify(cartItem8));
+             setTimeout(function(){
+                document.querySelector('.popup').style.display='block'
+             },0)  
+        }
 
 
     document.getElementById("biryanibucket").addEventListener("click", function () {
@@ -1019,44 +900,18 @@ let roll = [
        })
        function biryanibucketdiv() {
            window.location = "#biryanibucketday";
+           document.getElementById("beverages").style.fontWeight = 'normal'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'normal'
+           document.getElementById("deal").style.fontWeight = 'normal'
+           document.getElementById("legpiece").style.fontWeight = 'normal'
+           document.getElementById("chickenbucket").style.fontWeight = 'normal'
+           document.getElementById("rolls").style.fontWeight = 'normal'
+           document.getElementById("launch").style.fontWeight = 'normal'
            document.getElementById("biryanibucket").style.fontWeight = 'bold'
-           document.getElementById("biryanibucket").style.fontSize = '20px'
-
-            document.getElementById("match").style.fontWeight = 'normal'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
-    document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+           document.getElementById("boxmeal").style.fontWeight = 'normal'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
        }
 
 // ====================================================================
@@ -1147,63 +1002,44 @@ let roll = [
             let des = document.createElement("p");
             des.innerText = elem.des;
         
-            let button = document.createElement("button");
-            button.setAttribute("class", "Button");
-            button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+            let button9 = document.createElement("button");
+            button9.setAttribute("class", "Button");
+            button9.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
         
-            box.append(img, name, type, price, des, button);
+            box.append(img, name, type, price, des, button9);
             document.getElementById("boxmealproduct").append(box);
         
-            button.addEventListener("click", function () {
-                addtocart(elem);
+            button9.addEventListener("click", function () {
+                addtocart9(elem);
             })
         })
 
+        let cartItem9=JSON.parse(localStorage.getItem('cartItems9')) || []
+function addtocart9(elem){
+     cartItem9.push(elem)
+     localStorage.setItem('cartItems9', JSON.stringify(cartItem9));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
     document.getElementById("boxmeal").addEventListener("click", function () {
             boxmealdiv();
        })
        function boxmealdiv() {
            window.location = "#boxmealday";
+           document.getElementById("beverages").style.fontWeight = 'normal'
+           document.getElementById("match").style.fontWeight = 'normal'
+           document.getElementById("periperi").style.fontWeight = 'normal'
+           document.getElementById("deal").style.fontWeight = 'normal'
+           document.getElementById("legpiece").style.fontWeight = 'normal'
+           document.getElementById("chickenbucket").style.fontWeight = 'normal'
+           document.getElementById("rolls").style.fontWeight = 'normal'
+           document.getElementById("launch").style.fontWeight = 'normal'
+           document.getElementById("biryanibucket").style.fontWeight = 'normal'
            document.getElementById("boxmeal").style.fontWeight = 'bold'
-           document.getElementById("boxmeal").style.fontSize = '20px'
-
-            document.getElementById("match").style.fontWeight = 'noraml'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
-    document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+           document.getElementById("burgers").style.fontWeight = 'normal'
+           document.getElementById("snacks").style.fontWeight = 'normal'
        }
     
        // ====================================================================
@@ -1303,59 +1139,43 @@ let roll = [
         let des = document.createElement("p");
         des.innerText = elem.des;
     
-        let button = document.createElement("button");
-        button.setAttribute("class", "Button");
-        button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+        let button10 = document.createElement("button");
+        button10.setAttribute("class", "Button");
+        button10.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
     
-        box.append(img, name, type, price, des, button);
+        box.append(img, name, type, price, des, button10);
         document.getElementById("burgerproduct").append(box);
     
-        button.addEventListener("click", function () {
-            addtocart(elem);
+        button10.addEventListener("click", function () {
+            addtocart10(elem);
         })
     })
-
+    let cartItem10=JSON.parse(localStorage.getItem('cartItems10')) || []
+    function addtocart10(elem){
+         cartItem10.push(elem)
+         localStorage.setItem('cartItems10', JSON.stringify(cartItem10));
+         setTimeout(function(){
+            document.querySelector('.popup').style.display='block'
+         },0)  
+    }
 
 document.getElementById("burgers").addEventListener("click", function () {
         burgersdiv();
    })
    function burgersdiv() {
        window.location = "#burgersday";
+       document.getElementById("beverages").style.fontWeight = 'normal'
+       document.getElementById("match").style.fontWeight = 'normal'
+       document.getElementById("periperi").style.fontWeight = 'normal'
+       document.getElementById("deal").style.fontWeight = 'normal'
+       document.getElementById("legpiece").style.fontWeight = 'normal'
+       document.getElementById("chickenbucket").style.fontWeight = 'normal'
+       document.getElementById("rolls").style.fontWeight = 'normal'
+       document.getElementById("launch").style.fontWeight = 'normal'
+       document.getElementById("biryanibucket").style.fontWeight = 'normal'
+       document.getElementById("boxmeal").style.fontWeight = 'normal'
        document.getElementById("burgers").style.fontWeight = 'bold'
-       document.getElementById("burgers").style.fontSize = '20px'
-
-        document.getElementById("match").style.fontWeight = 'noraml'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
-
-    document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
+       document.getElementById("snacks").style.fontWeight = 'normal'
    }
 
 
@@ -1534,59 +1354,43 @@ document.getElementById("burgers").addEventListener("click", function () {
     let des = document.createElement("p");
     des.innerText = elem.des;
 
-    let button = document.createElement("button");
-    button.setAttribute("class", "Button");
-    button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+    let button11 = document.createElement("button");
+    button11.setAttribute("class", "Button");
+    button11.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
 
-    box.append(img, name, type, price, des, button);
+    box.append(img, name, type, price, des, button11);
     document.getElementById("snacksproduct").append(box);
 
-    button.addEventListener("click", function () {
-        addtocart(elem);
+    button11.addEventListener("click", function () {
+        addtocart11(elem);
     })
 })
-
+let cartItem11=JSON.parse(localStorage.getItem('cartItems11')) || []
+function addtocart11(elem){
+     cartItem11.push(elem)
+     localStorage.setItem('cartItems11', JSON.stringify(cartItem11));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
 document.getElementById("snacks").addEventListener("click", function () {
     snacksdiv();
 })
 function snacksdiv() {
    window.location = "#snacksday";
+   document.getElementById("beverages").style.fontWeight = 'normal'
+   document.getElementById("match").style.fontWeight = 'normal'
+   document.getElementById("periperi").style.fontWeight = 'normal'
+   document.getElementById("deal").style.fontWeight = 'normal'
+   document.getElementById("legpiece").style.fontWeight = 'normal'
+   document.getElementById("chickenbucket").style.fontWeight = 'normal'
+   document.getElementById("rolls").style.fontWeight = 'normal'
+   document.getElementById("launch").style.fontWeight = 'normal'
+   document.getElementById("biryanibucket").style.fontWeight = 'normal'
+   document.getElementById("boxmeal").style.fontWeight = 'normal'
+   document.getElementById("burgers").style.fontWeight = 'normal'
    document.getElementById("snacks").style.fontWeight = 'bold'
-   document.getElementById("snacks").style.fontSize = '20px'
-
-    document.getElementById("match").style.fontWeight = 'noraml'
-    document.getElementById("match").style.fontSize = '17px'
-
-    document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
-    document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
-    document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
-    document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
-    document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
-    document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
-    document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
-    document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("beverages").style.fontWeight = 'normal'
-    document.getElementById("beverages").style.fontSize = '17px'
 }
 // ====================================================================
 
@@ -1651,17 +1455,25 @@ beverages.forEach(function (elem) {
     let des = document.createElement("p");
     des.innerText = elem.des;
 
-    let button = document.createElement("button");
-    button.setAttribute("class", "Button");
-    button.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
+    let button12 = document.createElement("button");
+    button12.setAttribute("class", "Button");
+    button12.innerHTML = `Add To Cart <i class="fa-solid fa-cart-plus"></i>`;
 
-    box.append(img, name, type, price, des, button);
+    box.append(img, name, type, price, des, button12);
     document.getElementById("beveragesproduct").append(box);
 
-    button.addEventListener("click", function () {
-        addtocart(elem);
+    button12.addEventListener("click", function () {
+        addtocart12(elem);
     })
 })
+let cartItem=JSON.parse(localStorage.getItem('cartItems12')) || []
+function addtocart12(elem){
+     cartItem.push(elem)
+     localStorage.setItem('cartItems12', JSON.stringify(cartItem));
+     setTimeout(function(){
+        document.querySelector('.popup').style.display='block'
+     },0)  
+}
 
 
 document.getElementById("beverages").addEventListener("click", function () {
@@ -1669,52 +1481,25 @@ document.getElementById("beverages").addEventListener("click", function () {
 })
 function beveragesdiv() {
    window.location = "#beveragesday";
-   document.getElementById("beverages").style.fontWeight = 'bold'
-   document.getElementById("beverages").style.fontSize = '20px'
-
+    document.getElementById("beverages").style.fontWeight = 'bold'
     document.getElementById("match").style.fontWeight = 'normal'
-    document.getElementById("match").style.fontSize = '17px'
-
     document.getElementById("periperi").style.fontWeight = 'normal'
-    document.getElementById("periperi").style.fontSize = '17px'
-
     document.getElementById("deal").style.fontWeight = 'normal'
-    document.getElementById("deal").style.fontSize = '17px'
-
     document.getElementById("legpiece").style.fontWeight = 'normal'
-    document.getElementById("legpiece").style.fontSize = '17px'
-
     document.getElementById("chickenbucket").style.fontWeight = 'normal'
-    document.getElementById("chickenbucket").style.fontSize = '17px'
-
     document.getElementById("rolls").style.fontWeight = 'normal'
-    document.getElementById("rolls").style.fontSize = '17px'
-
     document.getElementById("launch").style.fontWeight = 'normal'
-    document.getElementById("launch").style.fontSize = '17px'
-
     document.getElementById("biryanibucket").style.fontWeight = 'normal'
-    document.getElementById("biryanibucket").style.fontSize = '17px'
-
     document.getElementById("boxmeal").style.fontWeight = 'normal'
-    document.getElementById("boxmeal").style.fontSize = '17px'
-
     document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
-    document.getElementById("burgers").style.fontWeight = 'normal'
-    document.getElementById("burgers").style.fontSize = '17px'
-
     document.getElementById("snacks").style.fontWeight = 'normal'
-    document.getElementById("snacks").style.fontSize = '17px'
+    
 }
-
-
 
 //add to cart functionlity and storing the data in localstorage
 
-let cartItem=JSON.parse(localStorage.getItem('cartItems')) || []
-function addtocart(elem){
-     cartItem.push(elem)
-     localStorage.setItem('cartItems', JSON.stringify(cartItem));
-}
+
+
+setInterval(function(){
+    document.querySelector('.popup').style.display='none'
+ },2000) 
