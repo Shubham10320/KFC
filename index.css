@@ -5,6 +5,11 @@ body{
 nav{   
   width: 100%;
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+ 
 }
 #topheader{
    display: flex;
@@ -36,15 +41,14 @@ hr{
     margin-top: -5px;
 }
 #navbar{
-    display:flex;   
-    margin-top: 50px;  
+    display:flex;
   cursor: pointer;
+   
   width: 80%;
-  height: 100px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-
+   
 }
 
 .right img{
@@ -64,12 +68,14 @@ hr{
     background-color: rgb(31, 28, 28);
     padding: 1px;
     color: white;
+    margin-top: 160px;
+   
   }
   .blwnavbar button{
     margin-inline: 11px;
     width: 140px;
     height: 41px;
-    margin-top: 11px;
+    margin-top: 10px;
     background-color: rgb(241, 3, 39);
     color: white;
     border: none;
@@ -80,6 +86,8 @@ hr{
 .left{
     display: flex;
     gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .right{
     display: flex;
@@ -102,6 +110,7 @@ hr{
     font-size: 35px;
     font-weight: bolder;
     padding: 5px;
+    margin-top: -8px;
 }
 
 .category{
@@ -111,8 +120,33 @@ hr{
     font-weight: bolder;
     text-transform: uppercase; 
     margin-top: 60px;
-    margin-bottom: 55px; 
-  
+    margin-bottom: 55px;   
+}
+
+#categories{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 70%;
+    margin: auto;
+    gap: 20px;
+}
+#categories img{
+    width: 100%;
+}
+.cards{
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+}
+.lastcard{
+    padding: 10px;
+}
+#container{
+    background-color: black;
+}
+.offer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
 }
 
  
