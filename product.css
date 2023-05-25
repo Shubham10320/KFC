@@ -136,7 +136,7 @@
      margin-top: 8px;
  }
 
-.popup{
+/* .popup{
     width: 500px;
     height: 120px;
     display: none;
@@ -152,7 +152,7 @@
      font-weight: bold;
      color: white;
 
-}
+} */
 
 
 
@@ -291,7 +291,7 @@
         border: 1px solid #353534;
         margin-top: -10px;
     }
-    .popup p{
+    /* .popup p{
         text-align: center;
         margin-top: 33px;
         font-size: 22px;
@@ -307,7 +307,7 @@
     left: 20%;
     top: 50%;
     background-color:#1e1e1d ;
-}
+} */
  }
 
 
@@ -453,7 +453,7 @@
        border: 1px solid #353534;
        margin-top: -10px;
    }
-   .popup p{
+   /* .popup p{
     text-align: center;
     margin-top: 33px;
     font-size: 18px;
@@ -469,5 +469,5 @@ position: fixed;
 left: 10%;
 top: 50%;
 background-color:#1e1e1d ;
-}
+} */
 }
