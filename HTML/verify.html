@@ -13,10 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@500&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <style>
+    body{
+        height: 100vh;
+    }
         #signin {
-            margin-top: 8vw;
+            margin-top: 20px;
         }
 
         #tc {
@@ -67,26 +70,54 @@
             border-radius: 200px;
             opacity: 0.3;
         }
+        section{
+            position: relative;
+            margin-bottom: 10px;
+            /* display: none; */
+        }
+        section .alokpopup{
+            position: fixed;
+            width: 300px;
+            height: 80px;
+            top: 2%;
+            left: 38%;
+            background-color: rgb(44, 42, 42);
+            border-radius: 8px;
+            
+        }
+        .alokpopup p{
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: rgb(161, 158, 158);
+            margin-top: 30px;
+
+        }
     </style>
 
 </head>
 
 <body>
-    <div class="otp">
+    <section> 
+        <div class="alokpopup">
+            <p><span id="alokotp">0</span></p>
+        </div>
+    </section>
+    <!-- <div class="otp">
         <h3 style="position: relative;">Your OTP is : <span>0</span> <span>0</span> <span>0</span> <span>0</span></h3>
-    </div>
+    </div> -->
     <div id="signin">
         <p class="center">Sign In / Sign Up</p>
-        <img class="center" src="KFC_logo.svg" alt="Brand logo">
+        <img class="center" src="../Images/KFC_logo.svg" alt="Brand logo">
         <h2 class="center">WE JUST TEXTED YOU</h2>
         <p class="center">Please enter the verification code we just sent to 91<span>9000000000</span></p>
         <p id="tc" class="center"><a href="signup.html" target="_self"> Different Number?</a></p>
 
         <div id="otp">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
+            <input type="text" maxlength="1" placeholder="*">
+            <input type="text" maxlength="1" placeholder="*">
+            <input type="text" maxlength="1" placeholder="*">
+            <input type="text" maxlength="1" placeholder="*">
         </div>
         <p class="center">Your code will expire in <span>2:00</span>sec</p>
         <button class="center">Resend the code</button>
@@ -103,6 +134,13 @@
 
         document.getElementById("signin").getElementsByTagName("p")[1].textContent = "Click below to Sign up again using another number";
         document.getElementById("signin").getElementsByTagName("p")[1].style.color="#ff2e00";
+
+        var arr=document.getElementById("otp").querySelectorAll("input");
+        for(var i=0; i<4; i++){
+            arr[i].placeholder="x";
+            arr[i].disabled=true;
+            arr[i].style.cursor="default";
+        }
     }
     else{
     var user = JSON.parse(localStorage.getItem("username"));
@@ -114,11 +152,19 @@
         d3: Math.floor(Math.random() * 10),
         d4: Math.floor(Math.random() * 10)
     }
-    var arr = document.getElementsByClassName("otp")[0].getElementsByTagName("span");
-    arr[0].textContent = otp.d1;
-    arr[1].textContent = otp.d2;
-    arr[2].textContent = otp.d3;
-    arr[3].textContent = otp.d4;
+    document.getElementById('alokotp').textContent="Your OTP is: "+otp.d1+" "+otp.d2+" "+otp.d3+" "+otp.d4
+
+
+                setTimeout(()=>{
+                    document.querySelector('section').style.display='block'
+                }, 0)
+                setTimeout(()=>{
+                    document.querySelector('section').style.display='none'
+                    
+
+                }, 5000)
+
+    
 
     function countdownTimer(a = 2) {
         var duration = a * 60; // 2 minutes in seconds
@@ -145,7 +191,6 @@
     // Start the countdown timer
     countdownTimer();
 
-
     //login
     document.getElementById("otp").getElementsByTagName("input")[3].addEventListener("keyup", function () {
         login();
@@ -159,6 +204,7 @@
             document.getElementById("signin").getElementsByTagName("button")[1].style.opacity = 1;
             document.getElementById("signin").getElementsByTagName("button")[1].addEventListener("click", function () {
 
+                
                 if (inpt[0].value == otp.d1 && inpt[1].value == otp.d2 && inpt[2].value == otp.d3 && inpt[3].value == otp.d4) {
                     //document.getElementById("signin").getElementsByTagName("span")[1].remove();
                     window.location.href = "http://www.w3schools.com";
@@ -177,10 +223,6 @@
                     }
             })
         }
-        //else{
-        //    document.getElementById("signin").getElementsByTagName("p")[3].innerHTML="Incorrect OTP";
-        //            document.getElementById("signin").getElementsByTagName("p")[3].style.color="#ff2e00";
-        //}
     }
 
     }
