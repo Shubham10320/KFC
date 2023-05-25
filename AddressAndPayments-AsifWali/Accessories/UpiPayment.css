@@ -1,0 +1,135 @@
+* {
+    background-color: rgb(36, 55, 69);
+
+}
+#main {
+    width: 75%;
+    margin: AUTO;
+    background-color: white;
+    height: 250px;
+}
+
+.top {
+    margin-top: 70px;
+    display: FLEX;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(241, 241, 241);
+
+}
+
+.top>img {
+    width: 140px;
+    height: 70px;
+
+}
+
+.second {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.second>div>h2,
+p {
+    background-color: rgb(255, 255, 255);
+}
+
+.second>div {
+    background-color: white;
+    padding-left: 20px;
+}
+
+.second>div:nth-child(3) {
+    padding-right: 40px;
+}
+
+.third {
+    display: flex;
+    align-content: justify;
+    width: 100%
+}
+
+.left {
+    background-color: white;
+    width: 50%;
+
+}
+
+.right {
+    background-color: rgb(241, 241, 241);
+    width: 50%;
+}
+
+.left>h3,
+input,
+button {
+    display: block;
+    margin: 30px 0px 5px 30px;
+    background-color: white;
+
+
+}
+
+.left>p {
+    color: blue;
+    margin-left: 30px;
+}
+
+.left>p>span {
+    background-color: white;
+    color: black;
+}
+
+.right>h4 {
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+
+}
+
+.right>div {
+    background-color: rgb(241, 241, 241);
+}
+
+.right>div>img {
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.left>input {
+    height: 50px;
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+.left>button {
+    background-color: rgb(240, 194, 80);
+    border: 1px solid rgb(240, 183, 38);
+    padding: 15px 25px 15px 25px;
+
+}
+
+.left>p {
+    text-align: end;
+    margin-right: 25px;
+}
+
+#bottom {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+#bottom>p {
+    background-color: rgb(36, 55, 69);
+}
+#successful{
+    height: 30vh;
+    width: 40%;
+    border: 3px solid crimson;
+}
