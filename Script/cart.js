@@ -105,12 +105,3 @@ function removeCartData(elem, idx){
     localStorage.setItem('CartData', JSON.stringify(data))
     display(data)
 }
-
-
-
-
-
-
-
-
-
