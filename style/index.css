@@ -1,3 +1,20 @@
+section{
+    position: relative;
+}
+/* section .popup{
+    width: 800px;
+    height: 500px;
+    border: 3px solid crimson;
+    position: fixed;
+    top: 22%;
+    left: 25%;
+    background-color: red;
+    display: none;
+} */
+
+
+
+
 body{
     width: 100%;
     margin: auto;
@@ -115,7 +132,7 @@ hr{
 
 .category{
     width: 70%;
-    margin: auto;      
+    margin-left: 20%;  
     font-size: 30px;   
     font-weight: bolder;
     text-transform: uppercase; 
@@ -127,7 +144,7 @@ hr{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     width: 70%;
-    margin: auto;
+    margin-left: 20%;
     gap: 20px;
 }
 #categories img{

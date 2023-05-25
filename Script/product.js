@@ -736,9 +736,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('added to cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -776,9 +776,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -816,9 +816,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -855,9 +855,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -894,9 +894,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -933,9 +933,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -972,9 +972,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -1011,9 +1011,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -1050,9 +1050,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -1089,9 +1089,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -1128,9 +1128,9 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
@@ -1167,15 +1167,35 @@ let beverages = [
         button.addEventListener("click", function () {
             if(check(elem.name)===false){
                 addToCart(elem)
-                alert('Item Added to Cart')
+                showPopUP()
             }else{
-                alert("This item is already added")
+                hidePopUp()
             }
             totalPrice();
         })
     })
 
 
+
+     function showPopUP(){
+        setTimeout(function () {
+            document.getElementById('pop').textContent='Item Added to Cart...'
+            document.querySelector('.popup').style.display = 'block'
+          }, 0) 
+          setTimeout(function () {
+            document.querySelector('.popup').style.display = 'none'
+          }, 2000) 
+     }
+
+     function hidePopUp(){
+        setTimeout(function () {
+            document.getElementById('pop').textContent='Item is already in cart...'
+            document.querySelector('.popup').style.display = 'block'
+          }, 0) 
+          setTimeout(function () {
+            document.querySelector('.popup').style.display = 'none'
+          }, 2000) 
+     }
 
 
 
@@ -1469,14 +1489,11 @@ allButton.forEach((elem)=>{
             element.style.fontWeight = 'normal'
         })
         event.target.style.fontWeight = 'bold'
-
     })
 })
 
 
-    //  setInterval(function () {
-    //   document.querySelector('.popup').style.display = 'none'
-    // }, 3000) 
+   
 
     function addToCart(elem){
         addCartArr.push(elem);

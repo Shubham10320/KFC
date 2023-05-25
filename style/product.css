@@ -136,23 +136,24 @@
      margin-top: 8px;
  }
 
-/* .popup{
-    width: 500px;
-    height: 120px;
+.popup{
+    width: 400px;
+    height: 80px;
     display: none;
     position: fixed;
     left: 40%;
     top: 50%;
     background-color:#1e1e1d ;
+    border-radius: 8px;
 }
 .popup p{
      text-align: center;
-     margin-top: 50px;
-     font-size: 30px;
+     margin-top: 30px;
+     font-size: 20px;
      font-weight: bold;
      color: white;
 
-} */
+}
 
 
 
@@ -292,7 +293,7 @@
         border: 1px solid #353534;
         margin-top: -10px;
     }
-    /* .popup p{
+    .popup p{
         text-align: center;
         margin-top: 33px;
         font-size: 22px;
@@ -308,7 +309,7 @@
     left: 20%;
     top: 50%;
     background-color:#1e1e1d ;
-} */
+}
  }
 
 
@@ -454,21 +455,21 @@
        border: 1px solid #353534;
        margin-top: -10px;
    }
-   /* .popup p{
+   .popup p{
     text-align: center;
-    margin-top: 33px;
-    font-size: 18px;
+    margin-top: 27px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
 
 }
 .popup{
-width: 300px;
+width: 200px;
 height: 80px;
 display: none;
 position: fixed;
-left: 10%;
+left: 25%;
 top: 50%;
 background-color:#1e1e1d ;
-} */
+}
 }
