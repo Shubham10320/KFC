@@ -10,7 +10,7 @@
     margin: auto;
     margin-top: 30px;
     gap: 30px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     padding: 10px;
 }
 .shubhamcartMaincontainer>#shubhamcartItem{
@@ -41,7 +41,7 @@
     margin-left: 10px;
     color: black;
     font-size: 16px;
-    
+    cursor: pointer;
 }
 #box2 #boxname{
     margin-left: 10px;
@@ -94,10 +94,12 @@
 
 #box3>#boxquantity .plus:hover{
     background-color: rgb(58, 56, 56);
+    cursor: pointer;
     color: white;
 }
 #box3>#boxquantity .minus:hover{
     background-color: rgb(58, 56, 56);
+    cursor: pointer;
     color: white;
 }
 #box3>#boxprice{
@@ -128,6 +130,7 @@
     align-items: center;
     padding: 2px;
     background-color: #f3f4f6;
+    cursor: pointer;
 }
 .shubhamPaymentCart>.applyCuppon #disblock{
     border-radius: 18px;
@@ -190,13 +193,5 @@
     margin: auto;
     padding: 10px;
     margin-top: 20px;
+    cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
