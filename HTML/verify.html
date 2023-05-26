@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC SIGN IN</title>
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+    body{
+        height: 100vh;
+    }
+        #signin {
+            margin-top: 20px;
+        }
+
+        #tc {
+            font-size: 1em;
+            font-weight: 100;
+            opacity: 0.8;
+            margin-top: 1.3rem;
+        }
+
+        #otp {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 1.5rem auto 2rem;
+        }
+
+        #otp>input {
+            border: none;
+            border-bottom: 1px solid #202124;
+            width: 2rem;
+            cursor: text;
+            font-size: x-large;
+            text-align: center;
+
+        }
+
+        #signin>button:first-of-type {
+            padding: 8px 40px;
+            border: none;
+            cursor: pointer;
+            color: #202124;
+            background-color: #fff;
+            font-weight: bold;
+            text-decoration: underline;
+            margin: 0px auto;
+            opacity: 0.5;
+        }
+
+        #signin>button:last-of-type {
+            height: 35px;
+            display: block;
+            background-color: #212529;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            padding: 10px 40px;
+            margin: 7% auto 5%;
+            border-radius: 200px;
+            opacity: 0.3;
+        }
+        section{
+            position: relative;
+            margin-bottom: 10px;
+            /* display: none; */
+        }
+        section .alokpopup{
+            position: fixed;
+            width: 300px;
+            height: 80px;
+            top: 2%;
+            left: 38%;
+            background-color: rgb(44, 42, 42);
+            border-radius: 8px;
+            
+        }
+        .alokpopup p{
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: rgb(161, 158, 158);
+            margin-top: 30px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <section> 
+        <div class="alokpopup">
+            <p><span id="alokotp">0</span></p>
+        </div>
+    </section>
+    <!-- <div class="otp">
+        <h3 style="position: relative;">Your OTP is : <span>0</span> <span>0</span> <span>0</span> <span>0</span></h3>
+    </div> -->
+    <div id="signin">
+        <p class="center">Sign In / Sign Up</p>
+        <img class="center" src="../Images/KFC_logo.svg" alt="Brand logo">
+        <h2 class="center">WE JUST TEXTED YOU</h2>
+        <p class="center">Please enter the verification code we just sent to 91<span>9000000000</span></p>
+        <p id="tc" class="center"><a href="signup.html" target="_self"> Different Number?</a></p>
+
+        <div id="otp">
+            <input type="text" maxlength="1" placeholder="*">
+            <input type="text" maxlength="1" placeholder="*">
+            <input type="text" maxlength="1" placeholder="*">
+            <input type="text" maxlength="1" placeholder="*">
+        </div>
+        <p class="center">Your code will expire in <span>2:00</span>sec</p>
+        <button class="center">Resend the code</button>
+        <button type="submit" class="center">Submit</button>
+    </div>
+
+</body>
+<script>
+    var attempt = localStorage.getItem("attempt") || 0;
+    console.log(attempt);
+    if (attempt >= 3) {
+        document.getElementById("signin").getElementsByTagName("h2")[0].textContent = "Too Many Wrong Attempts";
+        document.getElementById("signin").getElementsByTagName("h2")[0].style.color = "#ff2e00";
+
+        document.getElementById("signin").getElementsByTagName("p")[1].textContent = "Click below to Sign up again using another number";
+        document.getElementById("signin").getElementsByTagName("p")[1].style.color="#ff2e00";
+
+        var arr=document.getElementById("otp").querySelectorAll("input");
+        for(var i=0; i<4; i++){
+            arr[i].placeholder="x";
+            arr[i].disabled=true;
+            arr[i].style.cursor="default";
+        }
+    }
+    else{
+    var user = JSON.parse(localStorage.getItem("username"));
+    document.getElementById("signin").querySelector("span").textContent = user.phone;
+
+    var otp = {
+        d1: Math.floor(Math.random() * 10),
+        d2: Math.floor(Math.random() * 10),
+        d3: Math.floor(Math.random() * 10),
+        d4: Math.floor(Math.random() * 10)
+    }
+    document.getElementById('alokotp').textContent="Your OTP is: "+otp.d1+" "+otp.d2+" "+otp.d3+" "+otp.d4
+
+
+                setTimeout(()=>{
+                    document.querySelector('section').style.display='block'
+                }, 0)
+                setTimeout(()=>{
+                    document.querySelector('section').style.display='none'
+                    
+
+                }, 5000)
+
+    
+
+    function countdownTimer(a = 2) {
+        var duration = a * 60; // 2 minutes in seconds
+        var timer = setInterval(function () {
+            var minutes = parseInt(duration / 60, 10);
+            var seconds = parseInt(duration % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            document.getElementById("signin").getElementsByTagName("span")[1].textContent = minutes + ":" + seconds;
+
+            if (--duration < 0) {
+                clearInterval(timer);
+                document.getElementById("signin").getElementsByTagName("button")[0].style.opacity = 1;
+                document.getElementById("signin").getElementsByTagName("button")[0].addEventListener("click", function () {
+                    event.preventDefault();
+                    location.reload();
+                })
+            }
+        }, 1000); // update timer every second (1000 milliseconds)
+    }
+
+    // Start the countdown timer
+    countdownTimer();
+
+    //login
+    document.getElementById("otp").getElementsByTagName("input")[3].addEventListener("keyup", function () {
+        login();
+    });
+
+    function login() {
+
+        var inpt = document.getElementById("otp").getElementsByTagName("input");
+
+        if (inpt[0].value && inpt[1].value && inpt[2].value && inpt[3].value) {
+            document.getElementById("signin").getElementsByTagName("button")[1].style.opacity = 1;
+            document.getElementById("signin").getElementsByTagName("button")[1].addEventListener("click", function () {
+
+                
+                if (inpt[0].value == otp.d1 && inpt[1].value == otp.d2 && inpt[2].value == otp.d3 && inpt[3].value == otp.d4) {
+                    //document.getElementById("signin").getElementsByTagName("span")[1].remove();
+                    window.location.href = "http://www.w3schools.com";
+                }
+                else {
+                    localStorage.setItem("attempt", Number(attempt) + 1);
+                    //document.getElementById("signin").getElementsByTagName("span")[1].remove();
+                    document.getElementById("signin").getElementsByTagName("button")[0].style.opacity = 1;
+                    document.getElementById("signin").getElementsByTagName("button")[0].addEventListener("click", function () {
+                        event.preventDefault();
+                        window.location.reload();
+                    })
+
+                        document.getElementById("signin").getElementsByTagName("p")[3].innerHTML = "Incorrect OTP";
+                        document.getElementById("signin").getElementsByTagName("p")[3].style.color = "#ff2e00";
+                    }
+            })
+        }
+    }
+
+    }
+</script>
+
+</html>

@@ -1,6 +1,10 @@
 let data=JSON.parse(localStorage.getItem('CartData')) || []
 
 display(data)
+if(data.length>0){
+    display(data)
+    
+}
 
 function display(data){
 
@@ -105,3 +109,5 @@ function removeCartData(elem, idx){
     localStorage.setItem('CartData', JSON.stringify(data))
     display(data)
 }
+
+document.getElementById('length').textContent=data.length;
