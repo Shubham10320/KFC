@@ -134,6 +134,7 @@
      border-radius: 18px;
      width: 10rem;
      margin-top: 8px;
+     cursor: pointer;
  }
 
 .popup{
@@ -145,6 +146,7 @@
     top: 50%;
     background-color:#1e1e1d ;
     border-radius: 8px;
+    transition: 0.3s;
 }
 .popup p{
      text-align: center;
@@ -152,7 +154,6 @@
      font-size: 20px;
      font-weight: bold;
      color: white;
-
 }
 
 
@@ -287,6 +288,7 @@
         margin-top:10px ;
         width: 12rem;
         margin-bottom: 10px;
+        cursor: pointer;
     }
     #right>#searchDiv #shubhamHR {
         width: 100%;
