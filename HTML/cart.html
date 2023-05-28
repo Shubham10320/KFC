@@ -8,21 +8,32 @@
     <link rel="stylesheet" href="/KFC/style/cart.css">
     <title>Cart</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
+
+    <div id="doshopping">
+        <div id="cartshubham">
+            <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="3strip">
+            <h1>MY CART</h1>
+        </div>
+    </div>
+
+
     <div id="cartshubhamfirstdiv">
-        <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="">
+        <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="3strip">
         <h1>MY CART</h1>
     </div>
 
     <div class="shubhamcartMaincontainer">
-
-
         <div id="shubhamcartItem">
-        <!-- ------------appending all content from js ------ -->
+            <!-- ------------appending all content from js ------ -->
         </div>
+
+
+
+
 
         <div class="shubhamPaymentCart">
             <h2><span id="length">1</span> ITEMS</h2>
@@ -40,12 +51,12 @@
             <div class="payGst">
                 <span>Gst</span>
                 <div>
-                    ₹<span id="gst">54.0</span>
+                    ₹<span id="gst"></span>
                 </div>
             </div>
             <div class="payBack">
                 <span id="pay">Restaurant Handling (Incl. Taxes)</span>
-                <span>₹ <span>0</span></span>
+                <span>₹ <span id="res"></span></span>
             </div>
             <hr id="HR">
             <div class="payDonation">
@@ -64,8 +75,31 @@
             </div>
         </div>
     </div>
-</div>
-</body>
+    </div>
 
+    <div class="stillQuestion">
+        <h3>STILL HAVE A QUESTION?</h3>
+        <hr id="stillHR">
+        <div id="stillBtn">
+            <button><span><ion-icon name="call-outline"></ion-icon></span>Call Us</button>
+            <button><span><ion-icon name="mail-outline"></ion-icon></span>Contact Us</button>
+        </div>
+    </div>
+
+    <section>
+    <div class="discountPop">
+        <h3 id="headingshubhamchaubey">HAVE A DISCOUNT CODE?</h3>
+        <p>You can only apply one coupon per order</p>
+        <div><label for="text">Discount Code</label>
+            <input type="text" placeholder="Enter Code" id="discountField">
+        </div>
+        
+        <button id="applyDiscountButton">Apply</button>
+    </div>
+</section>
+
+
+
+</body>
 </html>
 <script src="/KFC/Script/cart.js"></script>
