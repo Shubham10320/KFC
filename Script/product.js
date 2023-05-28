@@ -1198,38 +1198,6 @@ let beverages = [
      }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     document.getElementById("match").addEventListener("click", function () {
         matchdiv();
     })
