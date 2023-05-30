@@ -108,5 +108,18 @@ function reedemBtn(){
     window.location.href='/KFC/HTML/deals.html'
 }
 
+let addCartArr = JSON.parse(localStorage.getItem("CartData")) || [];
+let valueofPrice=0;
+let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+function totalPrice(){
+    allPrice.forEach(function(elem){
+         console.log(elem.price)
+        valueofPrice+=parseInt(elem.price);
+    })
+     document.getElementById('navbar-price').innerText='₹'+valueofPrice+'.00';
+}
+totalPrice()
+
+
 // -----getting username-----
 var usernameData=JSON.parse(localStorage.getItem('username')) || []
