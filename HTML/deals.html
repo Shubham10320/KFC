@@ -5,12 +5,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/deals.css">
+    <link rel="stylesheet" href="/KFC/style/deals.css">
+    <link rel="stylesheet" href="/KFC/style/home.css">
+    <!-- <link rel="stylesheet" href="/KFC/style/footer.css"> -->
     <title>Today's Deals</title>
 
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="nav-checkbtn">
+                <span class="material-symbols-outlined" onclick="navbar()"> menu </span>
+                <h1 id="navclose"><ion-icon name="close-outline"></ion-icon></h1>
+            </div>
+            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="KFC-LOGO" id="navbar-kfc-logo" />
+            <p id="navbar-menu" class="hide-item">Menu</p>
+            <a id="blog" href="#">
+                <p id="navbar-about" class="hide-item">Deals</p>
+            </a>
+        </div>
+
+        <div class="navbar-right">
+            <img class="man-icon hide-item" id="navbar-man-icon"
+                src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
+                alt="man-icon" />
+            <p id="navbar-account" class="account hide-item">Sign In</p>
+
+            <p id="navbar-price">₹0.00</p>
+            <img id="navbar-cart-bucket"
+                src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" />
+        </div>
+
+    </nav>
+
+    <div class="shubhamnav">
+        <div class="navigation">
+            <div>
+                <h1 id="navbar-menu">Menu</h1>
+                <h1>→</h1>
+                <div><img
+                        src="https://mma.prnewswire.com/media/1460256/Burger_King_Burger_King__and_Impossible_Foods_Announce_the_Canad.jpg"
+                        alt=""></div>
+            </div>
+            <div>
+                <h1 id="navbar-about">Deal</h1>
+                <h1>→</h1>
+                <div><img src="https://staticg.sportskeeda.com/editor/2022/11/03667-16688163437652-1920.jpg" alt="">
+                </div>
+            </div>
+            <h3>Get Help</h3>
+            <h3>Contact Us</h3>
+            <h3>KFC FeedBack</h3>
+            <h3>Privacy Policy</h3>
+
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+    <div id="shubhamSecondNav">
+        <p><span><img src="/KFC/footerimg/Find_KFC.svg" alt=""></span>Delivery to:</p>
+        <p><span><img src="/KFC/Images/clock.264bac4c.svg" alt=""></span>ASAP</p>
+        <button>Change</button>
+    </div>
+
+
+
+    <div id="herosection">
+      <h1>DEALS & OFFERS</h1>
+    </div>
+    <div id="belowhero">
+        <img src="/KFC/Images/strips.png" alt="">
+        <div id="belowflex">
+            <h1>OFFERS FOR YOU</h1>
+            <a>Sign In to see exclusive offers & deals</a>
+=======
     <nav>
         <div id="topheader">
             <img src="https://online.kfc.co.in/static/media/Search_Pin.e88a4d93.svg" alt="">
@@ -39,34 +108,131 @@
             <h2>DEALS & OFFERS</h2>
             <img src="../Images/dealm.png" alt="">
         </div>
-        <img src="../Images/strips.png" alt="">
     </div>
 
-    <div id="mid">
-        <h2>
-            NATIONAL OFFERs
-        </h2>
-        <p>Sign In to see exclusive offers & deals</p>
+
+
+    <div id="footerThreeSection">
+        <div class="shubhamlogin">
+            <h1>SIGN IN TO SEE MORE EXCLUSIVE OFFERS & DEALS</h1>
+            <button>Login</button>
+        </div>
+        <div id="firstfooterSection">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/CHKZINGER.jpg?ver=29.2"
+                alt="">
+            <h1>1 PC FREE...</h1>
+            <P>1 Pc free Chicken Zinger on a cart value of 499 or above on first only for...</P>
+            <div>
+                <a href="/KFC/HTML/deals.html">View Details</a>
+                <button onclick="reedemBtn()">Redeem</button>
+            </div>
+
+        </div>
+        <div id="firstfooterSection">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/BIGSAVE.jpg?ver=29.2"
+                alt="">
+            <h1>UPTO RS 100 OFF....</h1>
+            <P>Upto Rs 100 off on min cart value of Rs 699 or more . Applicable on 4th order...</P>
+            <div>
+                <a href="/KFC/HTML/deals.html">View Details</a>
+                <button onclick="reedemBtn()">Redeem</button>
+            </div>
+        </div>
+        <div id="firstfooterSection">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/VEGZINGER.jpg?ver=29.2"
+                alt="">
+            <h1>1 Pc free Veg Zinger on...</h1>
+            <P>1 Pc free Veg Zinger on a cart value of 499 or above on first order....</P>
+            <div>
+                <a href="/KFC/HTML/deals.html">View Details</a>
+                <button onclick="reedemBtn()">Redeem</button>
+            </div>
+        </div>
     </div>
 
-    <div id="bottom">
 
-        <div>
-            <img src="../Images/findKFC.svg" alt="">
-        </div>
-        <div>
 
+ <br><br><br>
+
+<footer>
+    <div id="allsection">
+        <div><a href="#"><img
+                    src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg"></a>
         </div>
         <div>
-            <img src="../Images/CHKZINGER.jpg" alt="">
+            <ul>
+                <li>KFC Food</li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Order Lookup</a></li>
+                <li><a href="#">Gift Card</a></li>
+            </ul>
         </div>
         <div>
-            <img src="../Images/BIGSAVE.jpg" alt="">
+            <ul>
+                <li>Support</li>
+                <li><a href="#">Get Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">KFC Feedback</a></li>
+            </ul>
         </div>
         <div>
-            <img src="../Images/VEGZINGER.jpg" alt="">
+            <ul>
+                <li>Legal</li>
+                <li><a href="#">Terms and Condition</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Caution Notice</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>KFC India</li>
+                <li><a href="#">About KFC</a></li>
+                <li><a href="#">KFC Care</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Our Golden Past</a></li>
+            </ul>
+        </div>
+
+
+        <div><img src="/KFC/footerimg/Find_KFC.svg" alt="location"></i>
+            <a id="find">Find a KFC</a>
+        </div>
+
+
+        <div><img src="/KFC/footerimg/google_play.svg"></div>
+
+        <div><a><img src="/KFC/footerimg/apple.svg"></a></div>
+    </div>
+    <div id="end">
+        <div>
+            <h5>Copyright © KFC Corporation 2021 All Rights Reserved</h5>
+        </div>
+        <div id="social">
+            <a><img src="/KFC/footerimg/Social_Insta_White.svg"></a>
+            <a><img src="/KFC/footerimg/Social_Facebook_White.svg"></a>
+            <a><img src="/KFC/footerimg/Social_Twitter_White.svg"></a>
         </div>
     </div>
+    </footer>
 </body>
 
 </html>
+<script>
+    document.getElementById('navbar-menu').addEventListener('click', function(){
+    location.href='/KFC/HTML/product.html';
+})
+document.getElementById('navbar-about').addEventListener('click', function(){
+    location.href='/KFC/HTML/deals.html';
+})
+document.getElementById('navbar-account').addEventListener('click', function(){
+    location.href='/KFC/HTML/signup.html';
+})
+document.getElementById('navbar-cart-bucket').addEventListener('click', function(){
+    location.href='/KFC/HTML/cart.html';
+})
+document.getElementById('navbar-kfc-logo').addEventListener('click', function(){
+    location.href='/KFC/HTML/index.html';
+})
+
+</script>

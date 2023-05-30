@@ -51,6 +51,7 @@
 
  #right>div h1 {
      margin-left: 20px;
+     margin-top: 55px;
  }
 
  #right>#searchDiv {
@@ -159,7 +160,7 @@
 
 
 
- @media only screen and (min-width: 499px) and (max-width:1024px) {
+ @media screen and (max-width:800px) {
     
      #main {
          width: 100%;
@@ -181,6 +182,7 @@
          background-color: #fefbfb;
          box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
          margin-bottom: 30px;
+         margin-top: -10px;
      }
 
      #left img {
@@ -322,7 +324,7 @@
 
 
 
- @media only screen and (min-width: 299px) and (max-width:499px) {
+ @media screen and(max-width:500px) {
     
     #main {
         width: 100%;
@@ -343,6 +345,7 @@
         background-color: #fefbfb;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         margin-bottom: 30px;
+        margin-top: -10px;
     }
 
     #left img {

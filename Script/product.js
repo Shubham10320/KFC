@@ -1505,15 +1505,30 @@ allButton.forEach((elem)=>{
     }
 
 
-    // let valueofPrice=0;
-    // let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
-    // function totalPrice(){
-    //     allPrice.forEach(function(elem){
-    //         // console.log(elem.Price)
-    //         valueofPrice+=Number(elem.Price);
-    //     })
-    //     // document.getElementById('').innerText=allPrice.length;
-    // }
-    // totalPrice()
+    let valueofPrice=0;
+    let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+    function totalPrice(){
+        allPrice.forEach(function(elem){
+             console.log(elem.price)
+            valueofPrice+=parseInt(elem.price);
+        })
+         document.getElementById('navbar-price').innerText='₹'+valueofPrice+'.00';
+    }
+    totalPrice()
 
   
+    document.getElementById('navbar-menu').addEventListener('click', function(){
+        location.href='/KFC/HTML/product.html';
+    })
+    document.getElementById('navbar-about').addEventListener('click', function(){
+        location.href='/KFC/HTML/deals.html';
+    })
+    document.getElementById('navbar-account').addEventListener('click', function(){
+        location.href='/KFC/HTML/signup.html';
+    })
+    document.getElementById('navbar-cart-bucket').addEventListener('click', function(){
+        location.href='/KFC/HTML/cart.html';
+    })
+    document.getElementById('navbar-kfc-logo').addEventListener('click', function(){
+        location.href='/KFC/HTML/index.html';
+    })

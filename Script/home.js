@@ -45,7 +45,9 @@ document.getElementById('navbar-account').addEventListener('click', function(){
 document.getElementById('navbar-cart-bucket').addEventListener('click', function(){
     location.href='/KFC/HTML/cart.html';
 })
-
+document.getElementById('navbar-kfc-logo').addEventListener('click', function(){
+    location.href='/KFC/HTML/index.html';
+})
 
 
 
@@ -80,7 +82,6 @@ function chickendiv() {
      window.location = "/KFC/HTML/product.html#chickenbucketday";
 }
 
-
 document.getElementById("legpiece").addEventListener("click", function () {
     legdiv();
 })
@@ -100,9 +101,12 @@ function boxmealdiv() {
     window.location = "/KFC/HTML/product.html#boxmealday";
 }
 
-document.getElementById('').addEventListener('click', function(){
+document.getElementById('product').addEventListener('click', function(){
     location.href='/KFC/HTML/product.html';
 })
 function reedemBtn(){
     window.location.href='/KFC/HTML/deals.html'
 }
+
+// -----getting username-----
+var usernameData=JSON.parse(localStorage.getItem('username')) || []

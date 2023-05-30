@@ -9,11 +9,70 @@
     <link rel="icon" href="https://online.kfc.co.in/favicon.ico">
     <title>Menu</title>
     <link rel="stylesheet" href="/KFC/style/product.css">
+    <link rel="stylesheet" href="/KFC/style/home.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="nav-checkbtn">
+                <span class="material-symbols-outlined" onclick="navbar()"> menu </span>
+                <h1 id="navclose"><ion-icon name="close-outline"></ion-icon></h1>
+            </div>
+            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="KFC-LOGO" id="navbar-kfc-logo" />
+            <p id="navbar-menu" class="hide-item">Menu</p>
+            <a id="blog" href="#">
+                <p id="navbar-about" class="hide-item">Deals</p>
+            </a>
+        </div>
+
+        <div class="navbar-right">
+            <img class="man-icon hide-item" id="navbar-man-icon"
+                src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
+                alt="man-icon" />
+            <p id="navbar-account" class="account hide-item">Sign In</p>
+
+            <p id="navbar-price"></p>
+            <img id="navbar-cart-bucket"
+                src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" />
+        </div>
+
+    </nav>
+
+    <div class="shubhamnav">
+        <div class="navigation">
+            <div>
+                <h1 id="navbar-menu">Menu</h1>
+                <h1>→</h1>
+                <div><img
+                        src="https://mma.prnewswire.com/media/1460256/Burger_King_Burger_King__and_Impossible_Foods_Announce_the_Canad.jpg"
+                        alt=""></div>
+            </div>
+            <div>
+                <h1 id="navbar-about">Deal</h1>
+                <h1>→</h1>
+                <div><img src="https://staticg.sportskeeda.com/editor/2022/11/03667-16688163437652-1920.jpg" alt="">
+                </div>
+            </div>
+            <h3>Get Help</h3>
+            <h3>Contact Us</h3>
+            <h3>KFC FeedBack</h3>
+            <h3>Privacy Policy</h3>
+
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
     <div id="main">
         <div id=left>
             <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="">
@@ -46,11 +105,6 @@
                         </select>
                         <hr id="shubhamHR">
             </div>
-
-            
-            
-
-
 
             <div id="matchday">
                 <br><br><br>

@@ -1,43 +1,317 @@
-body{
-    margin: 0%;
-    padding: 0%;
+#herosection {
+    background-image: url("/KFC/Images/dealm.png");
     width: 100%;
+    height: 40vh;
 }
-#top>div>img{
-    width: 100%;
-    height: 20rem;
-}
-#top>div>h2{
-    position: absolute;
-    display: block;
-    font-size: 4.5rem;
+
+#herosection h1 {
     text-align: center;
-    margin: 7rem 20rem;
-    z-index: 1;
-    color: #fff;
+    color: white;
+    font-size: 65px;
+    padding-top: 80px;
+    font-weight: bold;
+    align-items: center;
 }
-#top>img:last-child{
-    margin: -4px auto auto 13rem;
-}
-#mid{
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    margin: 2rem;
-}
-#mid *{
+
+#belowhero {
+    width: 70%;
     margin: auto;
 }
-#bottom{
+
+#belowhero #belowflex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#belowhero #belowflex a {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+#belowhero #belowflex h1 {
+    font-weight: bold;
+}
+
+#footerThreeSection {
+    width: 70%;
     display: grid;
-    margin: 1rem 13rem 2rem 13rem;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    column-gap: 2rem;
+    margin: auto;
+    gap: 30px;
+    justify-content: center;
+
 }
-#bottom>div{
-    width: 100%;
+
+#footerThreeSection #firstfooterSection {
+    background-color: white;
+    border-radius: 10px;
 }
-#bottom img{
+
+#firstfooterSection img {
     width: 100%;
+
+    border-radius: 10px 10px 0 0;
+}
+
+#firstfooterSection h1 {
+    color: crimson;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+#firstfooterSection p {
+    color: rgb(59, 58, 58);
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+}
+
+#firstfooterSection>div {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+#firstfooterSection a {
+    color: rgb(54, 53, 53);
+    display: block;
+    text-decoration: underline;
+}
+
+#firstfooterSection button {
+    width: 10rem;
+    padding: 12px;
+    color: rgb(54, 53, 53);
+    border-radius: 30px;
+    border: 2px solid rgb(52, 51, 51);
+    font-weight: bold;
+}
+
+#footerThreeSection .shubhamlogin {
+    background-color: #e32a28;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#footerThreeSection .shubhamlogin h1 {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+#footerThreeSection .shubhamlogin button{
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    padding: 15px;
+    background-color: #e32a28;
+    width: 8rem;
+}
+#footerThreeSection .shubhamlogin button:hover{
+    color: #e32a28;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#footer3strip{
+    width: 80%;
+    margin: auto;
+}
+footer>a,p,ul{
+    color: white;
+}
+img,a{
+    cursor: pointer;
+    text-decoration: none;
+    color:white;
+}
+footer{
+    width:100%;
+    color:white;
+    background-color: rgb(34, 31, 38);
+}
+#offersanddeals{
+    display: flex;
+    height: 100px;
+    width: 70%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin:auto;
+}
+#allsection{
+    display: flex;
+    justify-content: space-evenly;
+    width:90%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    line-height: 30px;
+    padding: 100px 0px 100px 0px;
+}
+#location{
+    color:red;
+    cursor: pointer;
+}
+#end{
+    display: flex;
+    width: 50%;
+    margin:auto;
+    justify-content: space-between;
+}
+#social{
+    justify-content: end;
+}
+
+
+
+@media screen and (max-width: 800px){
+  #allsection{
+    display: grid;
+    justify-content: space-evenly;
+    width:80%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    line-height: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  #allsection div{
+    margin-top: 20px;
+    align-items: center;
+  }
+  #anotherthree{
+    padding-left: 2rem;
+    margin: auto;
+    background-color: rgb(237, 232, 232);
+    padding-bottom: 20px;
+    margin-top: -3px;
+  }
+  #anotherthree h1{
+    margin-top: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  #browse{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    margin-top: -30px;
+  }
+  #browse hr{
+    width: 70%;
+    height: 0.5px;
+  }
+  #shubhamCat{
+    width: 79%;
+    margin: auto;
+    display: grid;
+    border: 3px solid crimson;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+    margin-right:15px ;
+  }
+
+}
+@media screen and (max-width: 500px){
+    #allsection{
+        display: grid;
+        justify-content: space-evenly;
+        width:80%;
+        margin: auto;
+        align-items: center;
+        justify-items: center;
+        line-height: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+      }
+    #allsection div{
+        margin-top: 20px;
+        align-items: center;
+      }
+      main>#threeBtn{
+        border-radius: 30px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 20rem;
+        margin-top: 15px;
+        background-color: rgb(181, 174, 174);
+    }
+    #slider img{
+        height: 50vh;
+      }
+      #shubhamCat{
+        width: 79%;
+        margin: auto;
+        display: grid;
+        border: 3px solid crimson;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin-top: 25px;
+        margin-right:15px ;
+      }
+    
 }
