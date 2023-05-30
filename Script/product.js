@@ -273,7 +273,6 @@ let roll = [
         des: "Biryani lovers unite : Get 1 Veg Biryani Bucket with gravy, 1 Veg Patty & a Pepsi"
     }];
 
-
 let new_lunch = [{
     image: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000240.jpg?ver=29.2",
     name: "The Allu Arjun Combo",
@@ -302,7 +301,6 @@ let new_lunch = [{
     price: "345.00",
     des: "4 strips, 1 Dips, flavorful Rice & Gravy at a deal price"
     }]
-
 
 let biryani_bucket = [
     {
@@ -439,7 +437,6 @@ let box_meal = [
         des: "Try this classic pairing of 2pc Hot & Crispy, Medium Fries, 2 Dips & a chilled Pepsi Black [serves 1]"
     }];
 
-    
 let burger = [
     {
         image: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32576-0.jpg?ver=14.56",
@@ -699,11 +696,30 @@ let beverages = [
     }]
 
 
+   function priceSort(){
+    let filterprice=document.getElementById('filterprice').value 
+    if(filterprice==='htl'){
+        var ans=match_day.sort(function(a,b){
+            return b.price-a.price;
+    })
+        match(ans)
+        periperidata(ans)
+    }
+    if(filterprice==='lth'){
+        var anss=match_day.sort(function(a,b){
+            return a.price-b.price;
+    })
+        match(anss)
+        periperidata(anss)
+    }
+
+   } 
 
 
 
-
-
+match(match_day)
+function match(match_day){
+    document.getElementById("product_match").textContent=''
     match_day.forEach((elem) => {
 
         let box = document.createElement("div")
@@ -743,7 +759,11 @@ let beverages = [
             totalPrice();
         })
     })
+}
 
+    periperidata(periperi)
+    function periperidata(periperi){
+    document.getElementById("periperiproduct").textContent=''
     periperi.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -783,6 +803,10 @@ let beverages = [
             totalPrice();
         })
     })
+    }
+
+
+
 
     exclusiveDeal.forEach(function (elem) {
 

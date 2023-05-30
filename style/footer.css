@@ -107,3 +107,106 @@ footer{
 #social{
     justify-content: end;
 }
+
+
+
+@media screen and (max-width: 800px){
+  #footerThreeSection {
+    display: flex;
+    flex-direction: column;
+  }
+  #footerThreeSection #firstfooterSection{
+    margin: auto;
+    width: 80%;
+    border: 3px solid crimson;
+  }
+  #allsection{
+    display: grid;
+    justify-content: space-evenly;
+    width:80%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    line-height: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  #allsection div{
+    margin-top: 20px;
+    align-items: center;
+  }
+  #anotherthree{
+    padding-left: 2rem;
+    margin: auto;
+    background-color: rgb(237, 232, 232);
+    padding-bottom: 20px;
+    margin-top: -3px;
+  }
+  #anotherthree h1{
+    margin-top: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  #browse{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    margin-top: -30px;
+  }
+  #browse hr{
+    width: 70%;
+    height: 0.5px;
+  }
+  #shubhamCat{
+    width: 79%;
+    margin: auto;
+    display: grid;
+    border: 3px solid crimson;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+    margin-right:15px ;
+  }
+
+}
+@media screen and (max-width: 500px){
+    #allsection{
+        display: grid;
+        justify-content: space-evenly;
+        width:80%;
+        margin: auto;
+        align-items: center;
+        justify-items: center;
+        line-height: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+      }
+    #allsection div{
+        margin-top: 20px;
+        align-items: center;
+      }
+      main>#threeBtn{
+        border-radius: 30px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 20rem;
+        margin-top: 15px;
+        background-color: rgb(181, 174, 174);
+    }
+    #slider img{
+        height: 50vh;
+      }
+      #shubhamCat{
+        width: 79%;
+        margin: auto;
+        display: grid;
+        border: 3px solid crimson;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin-top: 25px;
+        margin-right:15px ;
+      }
+    
+}
