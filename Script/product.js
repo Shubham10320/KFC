@@ -1504,7 +1504,6 @@ allButton.forEach((elem)=>{
         }
     }
 
-
     let valueofPrice=0;
     let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
     function totalPrice(){

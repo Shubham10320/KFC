@@ -69,8 +69,7 @@
         <button>Change</button>
     </div>
 
-
-
+    
     <div id="herosection">
       <h1>DEALS & OFFERS</h1>
     </div>
@@ -79,34 +78,6 @@
         <div id="belowflex">
             <h1>OFFERS FOR YOU</h1>
             <a>Sign In to see exclusive offers & deals</a>
-=======
-    <nav>
-        <div id="topheader">
-            <img src="https://online.kfc.co.in/static/media/Search_Pin.e88a4d93.svg" alt="">
-            <p>Allow location access for local store menu and promos</p>
-            <button class="setLocation">Set Location</button>
-        </div>
-        <hr>
-        <div id="navbar">
-            <div class="left">
-                <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="">
-                <h4>Menu</h4>
-                <h4>Deals</h4>
-            </div>
-            <div class="right">
-                <img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
-                    alt="">
-                <p class="sign"> Sign in <span>|</span></p>
-                <img src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"
-                    alt="">
-            </div>
-        </div>
-    </nav>
-
-    <div id="top">
-        <div>
-            <h2>DEALS & OFFERS</h2>
-            <img src="../Images/dealm.png" alt="">
         </div>
     </div>
 
@@ -234,5 +205,19 @@ document.getElementById('navbar-cart-bucket').addEventListener('click', function
 document.getElementById('navbar-kfc-logo').addEventListener('click', function(){
     location.href='/KFC/HTML/index.html';
 })
+
+
+
+let addCartArr = JSON.parse(localStorage.getItem("CartData")) || [];
+    let valueofPrice=0;
+    let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+    function totalPrice(){
+        allPrice.forEach(function(elem){
+             console.log(elem.price)
+            valueofPrice+=parseInt(elem.price);
+        })
+         document.getElementById('navbar-price').innerText='₹'+valueofPrice+'.00';
+    }
+    totalPrice()
 
 </script>
