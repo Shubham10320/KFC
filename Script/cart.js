@@ -26,6 +26,7 @@ function totalPrice() {
     document.getElementById('totalSum').textContent = parseInt(total + totalsum)
     
 }
+ 
 
 
 function doShopping() {
@@ -42,6 +43,9 @@ function doShopping() {
     let btn = document.createElement('button')
     btn.textContent = 'Start Order'
     btn.id = 'startOrder'
+    btn.addEventListener('click', function(){
+        window.location.href='/KFC/HTML/product.html'
+    })
 
     child1.append(h1, btn)
 

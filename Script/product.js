@@ -704,6 +704,16 @@ let beverages = [
     })
         match(ans)
         periperidata(ans)
+        legdata(ans)
+        chickendata(ans)
+        dealdata(ans)
+        rolldata(ans)
+        lunchdata(ans)
+        biryanidata(ans)
+        boxdata(ans)
+        burgerdata(ans)
+        snacksdata(ans)
+        beveragesdata(ans)
     }
     if(filterprice==='lth'){
         var anss=match_day.sort(function(a,b){
@@ -711,8 +721,17 @@ let beverages = [
     })
         match(anss)
         periperidata(anss)
+        legdata(anss)
+        chickendata(anss)
+        dealdata(anss)
+        rolldata(anss)
+        lunchdata(anss)
+        biryanidata(anss)
+        burgerdata(anss)
+        boxdata(anss)
+        snacksdata(anss)
+        beveragesdata(anss)
     }
-
    } 
 
 
@@ -807,7 +826,9 @@ function match(match_day){
 
 
 
-
+    dealdata(exclusiveDeal)
+    function dealdata(exclusiveDeal){
+    document.getElementById("dealproduct").textContent=''
     exclusiveDeal.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -847,9 +868,14 @@ function match(match_day){
             totalPrice();
         })
     })
+    }
 
+
+
+    chickendata(chicken_bucket)
+    function chickendata(chicken_bucket){
+        document.getElementById("chickenbucketproduct").textContent=''
     chicken_bucket.forEach(function (elem) {
-
         let box = document.createElement("div")
     
         let img = document.createElement("img");
@@ -886,7 +912,13 @@ function match(match_day){
             totalPrice();
         })
     })
+}
 
+
+
+    legdata(leg_Piece)
+    function legdata(leg_Piece){
+    document.getElementById("legpieceproduct").textContent=''
     leg_Piece.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -925,7 +957,11 @@ function match(match_day){
             totalPrice();
         })
     })
+}
 
+    rolldata(roll)
+    function rolldata(roll){
+        document.getElementById("rollproduct").textContent=''
     roll.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -964,7 +1000,13 @@ function match(match_day){
             totalPrice();
         })
     })
+    }
 
+
+
+    lunchdata(new_lunch)
+    function lunchdata(new_lunch){
+        document.getElementById("launchproduct").textContent=''
     new_lunch.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -1003,7 +1045,13 @@ function match(match_day){
             totalPrice();
         })
     })
+    }
 
+
+
+    biryanidata(biryani_bucket)
+    function biryanidata(biryani_bucket){
+    document.getElementById("biryanibucketproduct").textContent=''
     biryani_bucket.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -1042,7 +1090,12 @@ function match(match_day){
             totalPrice();
         })
     })
+    }
 
+ 
+    boxdata(box_meal)
+    function boxdata(box_meal){
+    document.getElementById("boxmealproduct").textContent=''
     box_meal.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -1081,7 +1134,13 @@ function match(match_day){
             totalPrice();
         })
     })
+    }
 
+
+
+    burgerdata(burger)
+    function burgerdata(burger){
+        document.getElementById("burgerproduct").textContent=''
     burger.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -1120,7 +1179,12 @@ function match(match_day){
             totalPrice();
         })
     })
+    }
 
+
+    snacksdata(snacks)
+    function snacksdata(snacks){
+    document.getElementById("snacksproduct").textContent=''
     snacks.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -1159,7 +1223,12 @@ function match(match_day){
             totalPrice();
         })
     })
+    }
 
+
+    beveragesdata(beverages)
+    function beveragesdata(beverages){
+    document.getElementById("beveragesproduct").textContent=''
     beverages.forEach(function (elem) {
 
         let box = document.createElement("div")
@@ -1198,8 +1267,7 @@ function match(match_day){
             totalPrice();
         })
     })
-
-
+    }
 
      function showPopUP(){
         setTimeout(function () {
