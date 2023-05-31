@@ -123,3 +123,8 @@ totalPrice()
 
 // -----getting username-----
 var usernameData=JSON.parse(localStorage.getItem('username')) || []
+if(usernameData){
+    document.getElementById('navbar-account').textContent=usernameData.name;
+}else{
+    document.getElementById('navbar-account').textContent='Sign In';
+}
