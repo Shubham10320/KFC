@@ -1,5 +1,8 @@
 let data = JSON.parse(localStorage.getItem('CartData')) || []
 document.getElementById('length').textContent = data.length;
+
+
+
 display(data)
 if (data.length > 0) {
     document.querySelector('#doshopping').style.display = 'none'
@@ -114,6 +117,7 @@ function display(data) {
         minus.onclick = function () {
             minusfun(count.textContent)
         }
+        
         function minusfun(val) {
 
             if (val == 1) {
@@ -132,6 +136,7 @@ function display(data) {
                 var res = document.getElementById('res').textContent = 180
                 totalsum = gst + res
                 document.getElementById('totalSum').textContent = parseInt(last + totalsum)
+                document.getElementById('navbar-price').innerText='₹'+parseInt(last+totalsum)+'.00';
 
             }
 
@@ -156,8 +161,10 @@ function display(data) {
             var res = document.getElementById('res').textContent = 180
             totalsum = gst + res
             document.getElementById('totalSum').textContent = parseInt(last + totalsum)
-
+            
+         document.getElementById('navbar-price').innerText='₹'+parseInt(last+totalsum)+'.00';
         })
+        
         
 
         let boxprice = document.createElement('div')

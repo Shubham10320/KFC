@@ -39,9 +39,14 @@
     text-decoration: underline;
     font-weight: bold;
     margin-left: 10px;
-    color: black;
+    color: rgb(25, 24, 24);
     font-size: 16px;
     cursor: pointer;
+
+}
+#boxtyperemove .cartType,.cartRemove{
+    color: black;
+    margin-top: 30px;
 }
 #box2 #boxname{
     margin-left: 10px;
@@ -107,7 +112,9 @@
     font-size: 20px;
     font-weight: bold;
 }
-
+.payDonation p{
+    color: black;
+}
 
 
 .shubhamcartMaincontainer>.shubhamPaymentCart{
@@ -175,7 +182,7 @@
     margin-right: 10px;
 }
 .payDonation>#imdon{
-    font-weight: bold;
+    font-weight: 600;
       
 }
 .payDonation p{
