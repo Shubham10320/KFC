@@ -70,12 +70,74 @@
 
         </div>
     </div>
-    <br><br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <section id="homepopup">
+        <div class="addresspopup">
+            <div id="pophead">
+                <p onclick="addressBack()"><ion-icon name="arrow-back-outline"></ion-icon></p>
+                <h2>CHANGE YOUR ORDER</h2>
+                <p onclick="addressClose()"><ion-icon name="close-circle-outline"></ion-icon></p>
+            </div>
+            <hr id="popheadHR">
+            
+            <div id="addchange">
+                <label for="">ORDER TYPE</label><br>
+                <div>
+                <input type="text" id="pickdel" value="DELIVERY">
+                <button>EDIT</button>
+            </div>
+               <hr id="popheadHR2">
+            </div>
+
+            <div id="addlocation">
+                <label for="">YOUR LOCATION</label><br>
+                <div>
+                <input type="text" id="addLoc">
+                <button>EDIT</button>
+            </div>
+               <hr id="popheadHR3">
+            </div>
+
+            <label id="scheduleOrderlabel" style="display: block;">SCHEDULE FOR YOUR ORDER</label>
+
+            <div id="scheduleOrder">
+                
+                <br>
+                <div>
+                 <div id="orderone">
+                    <label for="" style="display: block;">Date</label>
+                    <div>
+                        <input type="text" value="Today">
+                    </div>
+                 </div>
+                 <div id="ordertwo">
+                    <label for="">Time</label>
+                    <div>
+                        <select id="asap">
+                            <option value="ASAP">ASAP</option>
+                            <option value="12:30 PM">12:30</option>
+                            <option value="1:30 PM">1:30</option>
+                            <option value="3:30 PM">3:30</option>
+                            <option value="5:30 PM">5:30</option>
+                            <option value="7:00 OM">7:00</option>
+                        </select>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <br><br><br>
+            <button id="homeconfirm" onclick="addConfirm()">CONFIRM</button>
+        </div>
+    </section>
+    
+
+
 
     <div id="shubhamSecondNav">
-        <p><span><img src="/KFC/footerimg/Find_KFC.svg" alt=""></span>Delivery to:</p>
-        <p><span><img src="/KFC/Images/clock.264bac4c.svg" alt=""></span>ASAP</p>
-        <button>Change</button>
+        <p><span><img src="/KFC/footerimg/Find_KFC.svg" alt=""></span>Delivery to: <span id="newAdd"></span></p>
+        <p id="delTime"><span><img src="/KFC/Images/clock.264bac4c.svg" alt=""></span> <span id="addnewTiime">ASAP</span></p>
+        <button onclick="changeAddress()">Change</button>
     </div>
 
     <main>

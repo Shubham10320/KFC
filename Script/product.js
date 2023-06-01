@@ -1711,14 +1711,17 @@ function check(name) {
 }
 
 let valueofPrice = 0;
+
 let allPrice = JSON.parse(localStorage.getItem("CartData")) || [];
 function totalPrice() {
     allPrice.forEach(function (elem) {
         console.log(elem.price)
         valueofPrice += parseInt(elem.price);
+        
     })
     document.getElementById('navbar-price').innerText = '₹' + valueofPrice + '.00';
 }
+
 totalPrice()
 
 
