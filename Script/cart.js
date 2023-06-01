@@ -15,7 +15,7 @@ if (data.length > 0) {
     doShopping();
 }
 
-totalPrice()
+// totalPrice()
 function totalPrice() {
     var total = 0
     var totalsum = 0
@@ -230,3 +230,14 @@ if(usernameData){
 }else{
     document.getElementById('navbar-account').textContent='Sign In';
 }
+
+
+
+
+
+
+
+
+
+
+

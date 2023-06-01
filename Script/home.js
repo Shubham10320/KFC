@@ -128,3 +128,34 @@ if(usernameData){
 }else{
     document.getElementById('navbar-account').textContent='Sign In';
 }
+
+
+
+
+
+// -----home popup to change address
+
+function changeAddress(){
+    document.querySelector('.addresspopup').style.display='block'
+    var inputValue=document.getElementById('pickdel').value;
+    var inputLoc=document.getElementById('addLoc').value;
+    var inputTiming=document.getElementById('asap').value;
+    document.getElementById('newAdd').textContent=inputLoc
+    document.getElementById('addnewTiime').textContent=inputTiming
+    console.log(inputLoc, inputTiming)
+}
+function addressBack(){
+    document.querySelector('.addresspopup').style.display='none'
+}
+function addressClose(){
+    document.querySelector('.addresspopup').style.display='none'
+}
+function addConfirm(){
+    var inputValue=document.getElementById('pickdel').value;
+    var inputLoc=document.getElementById('addLoc').value;
+    var inputTiming=document.getElementById('asap').value;
+    document.getElementById('newAdd').textContent=inputLoc
+    document.getElementById('addnewTiime').textContent=inputTiming
+    console.log(inputLoc, inputTiming)
+    document.querySelector('.addresspopup').style.display='none'
+}
