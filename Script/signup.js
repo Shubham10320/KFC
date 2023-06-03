@@ -1,7 +1,7 @@
 //Guest User
 document.getElementById("signin").getElementsByTagName("button")[1].addEventListener("click", function () {
     event.preventDefault();
-    window.location.href = "http://www.w3schools.com";
+    window.location.href = "../index.html";
 })
 
 // input field restriction
@@ -31,7 +31,7 @@ document.getElementById("signin").getElementsByTagName("button")[0].addEventList
     //console.log(typeof obj.name+"  "+obj.phone )
     localStorage.setItem("username",JSON.stringify(user));
     localStorage.setItem("attempt",0);
-    window.location.href = "verify.html";
+    window.location.href = "./verify.html";
 })
 
 

@@ -49,7 +49,7 @@ function doShopping() {
     btn.textContent = 'Start Order'
     btn.id = 'startOrder'
     btn.addEventListener('click', function(){
-        window.location.href='/KFC/HTML/product.html'
+        window.location.href='./product.html'
     })
 
     child1.append(h1, btn)

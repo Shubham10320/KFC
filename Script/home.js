@@ -34,19 +34,19 @@ function showSlides() {
 
 //-------page linking---------
 document.getElementById('navbar-menu').addEventListener('click', function () {
-    location.href = '/KFC/HTML/product.html';
+    location.href = './HTML/product.html';
 })
 document.getElementById('navbar-about').addEventListener('click', function () {
-    location.href = '/KFC/HTML/deals.html';
+    location.href = './HTML/deals.html';
 })
 document.getElementById('navbar-account').addEventListener('click', function () {
-    location.href = '/KFC/HTML/signup.html';
+    location.href = './HTML/signup.html';
 })
 document.getElementById('navbar-cart-bucket').addEventListener('click', function () {
-    location.href = '/KFC/HTML/cart.html';
+    location.href = './HTML/cart.html';
 })
 document.getElementById('navbar-kfc-logo').addEventListener('click', function () {
-    location.href = '/KFC/HTML/index.html';
+    location.href = 'index.html';
 })
 
 
@@ -57,21 +57,21 @@ document.getElementById("periperi").addEventListener("click", function () {
     periperidiv();
 })
 function periperidiv() {
-    window.location = "/KFC/HTML/product.html#periperiday";
+    window.location = "./HTML/product.html#periperiday";
 }
 
 document.getElementById("match").addEventListener("click", function () {
     matchdiv();
 })
 function matchdiv() {
-    window.location = "/KFC/HTML/product.html#matchday";
+    window.location = "./HTML/product.html#matchday";
 }
 
 document.getElementById("deal").addEventListener("click", function () {
     dealdiv();
 })
 function dealdiv() {
-    window.location = "/KFC/HTML/product.html#dealday";
+    window.location = "./HTML/product.html#dealday";
 }
 
 document.getElementById("chickenbucket").addEventListener("click", function () {
@@ -79,33 +79,33 @@ document.getElementById("chickenbucket").addEventListener("click", function () {
 })
 
 function chickendiv() {
-    window.location = "/KFC/HTML/product.html#chickenbucketday";
+    window.location = "./HTML/product.html#chickenbucketday";
 }
 
 document.getElementById("legpiece").addEventListener("click", function () {
     legdiv();
 })
 function legdiv() {
-    window.location = "/KFC/HTML/product.html#legpieceday";
+    window.location = "./HTML/product.html#legpieceday";
 }
 document.getElementById("rolls").addEventListener("click", function () {
     rolldiv();
 })
 function rolldiv() {
-    window.location = "/KFC/HTML/product.html#rollsday";
+    window.location = "./HTML/product.html#rollsday";
 }
 document.getElementById("boxmeal").addEventListener("click", function () {
     boxmealdiv();
 })
 function boxmealdiv() {
-    window.location = "/KFC/HTML/product.html#boxmealday";
+    window.location = "./HTML/product.html#boxmealday";
 }
 
 document.getElementById('product').addEventListener('click', function () {
-    location.href = '/KFC/HTML/product.html';
+    location.href = 'product.html';
 })
 function reedemBtn() {
-    window.location.href = '/KFC/HTML/deals.html'
+    window.location.href = './HTML/deals.html'
 }
 
 let addCartArr = JSON.parse(localStorage.getItem("CartData")) || [];
@@ -161,7 +161,7 @@ function addConfirm() {
     document.getElementById('newAdd').textContent = inputLoc
     document.getElementById('addnewTime').textContent = inputTiming
 
-    window.location.href = '/KFC/HTML/index.html'
+    // window.location.href = '../index.html'
     document.querySelector('.addresspopup').style.display = 'none'
 }
  document.getElementById('newAdd').textContent = homeData

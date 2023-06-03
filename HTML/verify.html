@@ -111,7 +111,7 @@
         <img class="center" src="../Images/KFC_logo.svg" alt="Brand logo">
         <h2 class="center">WE JUST TEXTED YOU</h2>
         <p class="center">Please enter the verification code we just sent to 91<span>9000000000</span></p>
-        <p id="tc" class="center"><a href="signup.html" target="_self"> Different Number?</a></p>
+        <p id="tc" class="center"><a href="./signup.html" target="_self"> Different Number?</a></p>
 
         <div id="otp">
             <input type="text" maxlength="1" placeholder="*">
@@ -207,7 +207,7 @@
                 
                 if (inpt[0].value == otp.d1 && inpt[1].value == otp.d2 && inpt[2].value == otp.d3 && inpt[3].value == otp.d4) {
                     //document.getElementById("signin").getElementsByTagName("span")[1].remove();
-                    window.location.href = "/KFC/HTML/index.html";
+                    window.location.href = "../index.html";
                 }
                 else {
                     localStorage.setItem("attempt", Number(attempt) + 1);
@@ -224,7 +224,6 @@
             })
         }
     }
-
     }
 </script>
 

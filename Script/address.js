@@ -1,12 +1,12 @@
 function gotoCart(){
-    window.location.href='/KFC/HTML/cart.html'
+    window.location.href='./cart.html'
 }
 
 function gotoLogin(){
-    window.location.href='/KFC/HTML/signup.html'
+    window.location.href='./signup.html'
 }
 function gotoHome(){
-    window.location.href='/KFC/HTML/index.html'
+    window.location.href='../index.html'
 }
 
 
@@ -39,7 +39,7 @@ function addConfirm(){
     localStorage.setItem('homeAddress', JSON.stringify(inputLoc))
     localStorage.setItem('homeTiming', JSON.stringify(inputTiming))
 
-     window.location.href = '/KFC/HTML/address.html'
+     window.location.href = 'address.html'
     document.querySelector('.addresspopup').style.display = 'none'
 }
 
@@ -105,5 +105,5 @@ if(usernameData){
 
 
 document.getElementById('gotopaymentgateway').addEventListener('click', function(){
-    window.location.href='/KFC/HTML/payment.html'
+    window.location.href='./payment.html'
 })

@@ -282,6 +282,6 @@ securitycode.addEventListener('focus', function () {
 
 
 document.getElementById('gotoOTP').addEventListener('click', function(){
-    window.location.href='/KFC/HTML/otp.html'
+    window.location.href='./otp.html'
 })
 
