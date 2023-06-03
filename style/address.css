@@ -1,55 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 
-#div-desktop-header>#main-nav-div{
-    display:flex;
+#div-desktop-header>#main-nav-div {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:0px 95px;
+    margin: 0px 95px;
     padding: 25px 0px;
 }
-#div-desktop-header>#main-nav-div>div:nth-child(2)>img{
+
+#div-desktop-header>#main-nav-div>div:nth-child(2)>img {
     margin-left: 100px;
-    
+
 }
-#div-desktop-header>#main-nav-div>#nav-buttons{
-    display:flex;
- justify-content: center;
- align-items: center;
+
+#div-desktop-header>#main-nav-div>#nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#div-desktop-header>#main-nav-div>#nav-buttons>div{
-    margin:10px;
+
+#div-desktop-header>#main-nav-div>#nav-buttons>div {
+    margin: 10px;
 }
-#div-desktop-header>#main-nav-div>#nav-buttons>div>button{
+
+#div-desktop-header>#main-nav-div>#nav-buttons>div>button {
     background-color: white;
     border: none;
     font-size: 16px;
     font-weight: bold;
     align-items: center;
 }
-#div-desktop-header>#main-nav-div>#nav-buttons>div>button:hover{
+
+#div-desktop-header>#main-nav-div>#nav-buttons>div>button:hover {
     cursor: pointer;
 }
-#div-desktop-header>#main-nav-div>div:first-child>button{
+
+#div-desktop-header>#main-nav-div>div:first-child>button {
     background-color: white;
     border: 1px solid black;
     text-align: center;
     border-radius: 20px;
-    padding:12px 44px;
+    padding: 12px 44px;
     font-weight: bolder;
 
 }
-#div-desktop-header>#main-nav-div>div:first-child>button:hover{
+
+#div-desktop-header>#main-nav-div>div:first-child>button:hover {
     background-color: black;
     color: white;
     cursor: pointer;
 }
-#kfcstripslogo{
+
+#kfcstripslogo {
     width: 75%;
     margin: auto;
-    margin-top: -10px;
+    margin-top: -1px;
 }
-#kfcstripslogo>div{
+
+#kfcstripslogo>div {
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -57,12 +66,14 @@
     font-weight: bold;
     font-family: sans-serif;
 }
-#kfcstripslogo>div>h1{
+
+#kfcstripslogo>div>h1 {
     font-size: 40px;
     font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
 }
 
-#addressMainDiv{
+#addressMainDiv {
     width: 75%;
     /* border: 3px solid crimson; */
     margin: auto;
@@ -72,89 +83,107 @@
     margin-top: -10px;
     color: rgb(43, 38, 38);
 }
-#addressMainDiv>div{
+
+#addressMainDiv>div {
     width: 100%;
     gap: 30px;
     /* border: 3px solid green; */
 }
-#addressMainDiv>div>#addoneDiv{
+
+#addressMainDiv>div>#addoneDiv {
     width: 85%;
     /* border: 1px solid green; */
     display: flex;
     gap: 20px;
     padding: 40px;
-    background-color:#f3f4f6;
+    background-color: #f3f4f6;
     border-radius: 5px;
     margin-bottom: 20px;
 }
-#addressMainDiv>div>#addoneDiv h2{
+
+#addressMainDiv>div>#addoneDiv h2 {
     width: 50%;
     font-weight: bold;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
 
-#addoneDiv>div>#divoneshubham{
+#addoneDiv>div>#divoneshubham {
     display: flex;
     justify-content: space-between;
     /* border: 1px solid yellow; */
     align-items: center;
     flex-direction: row;
 }
-#addoneDiv>div>#divoneshubham p{
+
+#addoneDiv>div>#divoneshubham p {
     margin-left: 7px;
     font-family: sans-serif;
     font-weight: 500;
     color: black;
+
 }
-#addoneDiv>div>#divoneshubham button{
+
+#addoneDiv>div>#divoneshubham button {
     border: none;
     color: black;
     text-decoration: underline;
-     font-weight: bold; 
+    font-weight: bold;
 }
-#addoneDiv>div>#divoneshubham p span{
+
+#addoneDiv>div>#divoneshubham p span {
     margin-left: 7px;
 }
-#addoneDiv>div>p span{
+
+#addoneDiv>div>p span {
     margin-left: 7px;
 }
-#addoneDiv>div>#asapclock{
+
+#addoneDiv>div>#asapclock {
     margin-top: 20px;
     font-weight: 500;
     color: black;
     font-family: sans-serif;
 }
-#addoneDiv>div>p{
+
+#addoneDiv>div>p {
     width: 70%;
     /* border: 3px solid crimson; */
     margin-left: 28px;
-    margin-top: -10px;
+    margin-top: 10px;
     line-height: 1.3;
+
 }
-#addressMainDiv>div>#part2{
+
+#addressMainDiv>div>#part2 {
     /* border: 1px solid black; */
     width: 85%;
-    background-color:#f3f4f6;
+    background-color: #f3f4f6;
     display: flex;
     gap: 20px;
     padding: 40px;
     margin-bottom: 20px;
 }
-#addressMainDiv>div>#part2 h2{
+
+#addressMainDiv>div>#part2 h2 {
     width: 30%;
     font-weight: bold;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
+
 #addressMainDiv>div>#part2>div {
-     width: 70%;
-     
+    width: 70%;
+
 }
-#addressMainDiv>div>#part2>div>p{
+
+#addressMainDiv>div>#part2>div>p {
     margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-#addressMainDiv>div>#part2>div>#addNote{
+
+#addressMainDiv>div>#part2>div>#addNote {
     border: none;
     border-bottom: 1px solid gray;
     width: 18rem;
@@ -162,14 +191,15 @@
     padding: 10px;
     background-color: #f3f4f6;
 }
-#addressMainDiv>div>#part2>div input{
+
+#addressMainDiv>div>#part2>div input {
     accent-color: black;
 }
 
-#addressMainDiv>div>#part3{
-     /* border: 4px solid black;  */
+#addressMainDiv>div>#part3 {
+    /* border: 4px solid black;  */
     width: 85%;
-    background-color:#f3f4f6;
+    background-color: #f3f4f6;
     display: flex;
     gap: 20px;
     padding: 40px;
@@ -177,71 +207,103 @@
     display: flex;
     flex-direction: column;
 }
-#part3>#firstpart3{
+
+#part3>#firstpart3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#part3>#firstpart3>h2{
+
+#part3>#firstpart3>h2 {
     width: 30%;
     font-weight: bold;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
-#part3>#secondpart3{
+
+#part3>#secondpart3 {
     width: 65%;
     margin-left: 14em;
     padding: 10px;
 }
-#part3>#secondpart3 input{
+
+#part3>#secondpart3 input {
     border: none;
     border-bottom: 1px solid gray;
     width: 25rem;
-    background-color:#f3f4f6;
+    background-color: #f3f4f6;
     padding: 10px;
 }
-#part3>#secondpart3>div{
+
+#part3>#secondpart3>div {
     width: 100%;
 }
-#part4{
-    width: 80%;
-    background-color:#f3f4f6;
+
+#part3 #gettingUserDetails {
+    width: 14rem;
+    border: none;
+    background-color: rgb(49, 46, 46);
+    color: white;
+    padding: 15px;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+}
+
+
+
+#part4 {
+    width: 82%;
+    background-color: #f3f4f6;
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 40px;
     align-items: center;
 }
-#part4 h2{
+
+#part4 h2 {
     width: 30%;
     font-weight: bold;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
-#part4 h3{
+
+#part4 h3 {
     text-decoration: underline;
+    cursor: pointer;
 }
 
-#addressMainDiv>#addtwoDiv{
+
+
+
+
+
+#addressMainDiv>#addtwoDiv {
     width: 55%;
-    /* border: 4px solid orange; */
+     /* border: 4px solid orange;  */
     height: 35vh;
     padding: 15px;
     border-radius: 8px;
     background-color: #f3f4f6;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-#addressMainDiv>#addtwoDiv div{
+
+#addressMainDiv>#addtwoDiv div {
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: auto;
+    margin-bottom: 10px;
 }
-#addressMainDiv>#addtwoDiv h2{
+
+#addressMainDiv>#addtwoDiv h2 {
     width: 90%;
     margin: auto;
+    margin-bottom: 15px;
 }
-#addressMainDiv>#addtwoDiv button{
+
+#addressMainDiv>#addtwoDiv button {
     width: 99%;
     margin: auto;
     padding: 15px;
@@ -250,4 +312,70 @@
     background-color: crimson;
     border-radius: 30px;
     border: none;
+    margin-top: 20px;
+}
+
+#addressMainDiv>#addtwoDiv button span {
+    margin-left: 40px;
+}
+
+#homepopup>.addresspopup{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+#choosePaymentWay {
+    position: relative;
+}
+
+#mainchoosepayment {
+    position: fixed;
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid gray;
+    top:10%;
+    left: 35%;
+    background-color: #f1f2f4;
+    display: none;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#mainchoosepayment>#paymentWayHead {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    background-color: white;
+    color: rgb(44, 42, 42);
+}
+#mainchoosepayment>#chooseMethod{
+    padding: 15px;
+}
+#mainchoosepayment>#chooseMethod div{
+    padding: 15px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}
+#mainchoosepayment #choosingMethodDoneBtn{
+    width: 14rem;
+    padding: 12px;
+    border: none;
+    color: white;
+    background-color: rgb(50, 48, 48);
+    border-radius: 30px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+#mainchoosepayment>#chooseMethod div input{
+    accent-color: black;
 }

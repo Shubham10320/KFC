@@ -1,15 +1,15 @@
 
-function navbar(){
-    document.querySelector('.shubhamnav').style.display='block'
-    document.querySelector('.material-symbols-outlined').style.display='none'
-    document.getElementById('navclose').style.display='block';
+function navbar() {
+    document.querySelector('.shubhamnav').style.display = 'block'
+    document.querySelector('.material-symbols-outlined').style.display = 'none'
+    document.getElementById('navclose').style.display = 'block';
 
 }
 
-document.getElementById('navclose').addEventListener('click', function(){
-    document.querySelector('.shubhamnav').style.display='none'
-    document.querySelector('.material-symbols-outlined').style.display='block'
-    document.getElementById('navclose').style.display='none';
+document.getElementById('navclose').addEventListener('click', function () {
+    document.querySelector('.shubhamnav').style.display = 'none'
+    document.querySelector('.material-symbols-outlined').style.display = 'block'
+    document.getElementById('navclose').style.display = 'none';
 })
 
 
@@ -33,20 +33,20 @@ function showSlides() {
 }
 
 //-------page linking---------
-document.getElementById('navbar-menu').addEventListener('click', function(){
-    location.href='/KFC/HTML/product.html';
+document.getElementById('navbar-menu').addEventListener('click', function () {
+    location.href = '/KFC/HTML/product.html';
 })
-document.getElementById('navbar-about').addEventListener('click', function(){
-    location.href='/KFC/HTML/deals.html';
+document.getElementById('navbar-about').addEventListener('click', function () {
+    location.href = '/KFC/HTML/deals.html';
 })
-document.getElementById('navbar-account').addEventListener('click', function(){
-    location.href='/KFC/HTML/signup.html';
+document.getElementById('navbar-account').addEventListener('click', function () {
+    location.href = '/KFC/HTML/signup.html';
 })
-document.getElementById('navbar-cart-bucket').addEventListener('click', function(){
-    location.href='/KFC/HTML/cart.html';
+document.getElementById('navbar-cart-bucket').addEventListener('click', function () {
+    location.href = '/KFC/HTML/cart.html';
 })
-document.getElementById('navbar-kfc-logo').addEventListener('click', function(){
-    location.href='/KFC/HTML/index.html';
+document.getElementById('navbar-kfc-logo').addEventListener('click', function () {
+    location.href = '/KFC/HTML/index.html';
 })
 
 
@@ -79,14 +79,14 @@ document.getElementById("chickenbucket").addEventListener("click", function () {
 })
 
 function chickendiv() {
-     window.location = "/KFC/HTML/product.html#chickenbucketday";
+    window.location = "/KFC/HTML/product.html#chickenbucketday";
 }
 
 document.getElementById("legpiece").addEventListener("click", function () {
     legdiv();
 })
 function legdiv() {
-     window.location = "/KFC/HTML/product.html#legpieceday";
+    window.location = "/KFC/HTML/product.html#legpieceday";
 }
 document.getElementById("rolls").addEventListener("click", function () {
     rolldiv();
@@ -101,61 +101,68 @@ function boxmealdiv() {
     window.location = "/KFC/HTML/product.html#boxmealday";
 }
 
-document.getElementById('product').addEventListener('click', function(){
-    location.href='/KFC/HTML/product.html';
+document.getElementById('product').addEventListener('click', function () {
+    location.href = '/KFC/HTML/product.html';
 })
-function reedemBtn(){
-    window.location.href='/KFC/HTML/deals.html'
+function reedemBtn() {
+    window.location.href = '/KFC/HTML/deals.html'
 }
 
 let addCartArr = JSON.parse(localStorage.getItem("CartData")) || [];
-let valueofPrice=0;
-let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
-function totalPrice(){
-    allPrice.forEach(function(elem){
-         console.log(elem.price)
-        valueofPrice+=parseInt(elem.price);
+let valueofPrice = 0;
+let allPrice = JSON.parse(localStorage.getItem("CartData")) || [];
+function totalPrice() {
+    allPrice.forEach(function (elem) {
+        console.log(elem.price)
+        valueofPrice += parseInt(elem.price);
     })
-     document.getElementById('navbar-price').innerText='₹'+valueofPrice+'.00';
+    document.getElementById('navbar-price').innerText = '₹' + valueofPrice + '.00';
 }
 totalPrice()
 
 
 // -----getting username-----
-var usernameData=JSON.parse(localStorage.getItem('username')) || []
-if(usernameData){
-    document.getElementById('navbar-account').textContent=usernameData.name;
-}else{
-    document.getElementById('navbar-account').textContent='Sign In';
-}
-
+var usernameData = JSON.parse(localStorage.getItem('username'))
+if (usernameData) {
+    document.getElementById('navbar-account').textContent = usernameData.name;
+ }else{
+    document.getElementById('navbar-account').textContent='Sign In'
+ }
 
 
 
 
 // -----home popup to change address
+function changeAddress() {
+    document.querySelector('.addresspopup').style.display = 'block'
+    // var inputValue=document.getElementById('pickdel').value;
+    // var inputLoc=document.getElementById('addLoc').value;
+    // var inputTiming=document.getElementById('asap').value,
+}
+function addressBack() {
+    document.querySelector('.addresspopup').style.display = 'none'
+}
+function addressClose() {
+    document.querySelector('.addresspopup').style.display = 'none'
+}
 
-function changeAddress(){
-    document.querySelector('.addresspopup').style.display='block'
-    var inputValue=document.getElementById('pickdel').value;
-    var inputLoc=document.getElementById('addLoc').value;
-    var inputTiming=document.getElementById('asap').value;
-    document.getElementById('newAdd').textContent=inputLoc
-    document.getElementById('addnewTiime').textContent=inputTiming
-    console.log(inputLoc, inputTiming)
+let homeData = JSON.parse(localStorage.getItem('homeAddress')) || ''
+let homeTime = JSON.parse(localStorage.getItem('homeTiming')) || ''
+
+
+
+function addConfirm() {
+    var inputLoc = document.getElementById('addLoc').value;
+    var inputTiming = document.getElementById('asap').value;
+
+    localStorage.setItem('homeAddress', JSON.stringify(inputLoc))
+    localStorage.setItem('homeTiming', JSON.stringify(inputTiming))
+
+    document.getElementById('newAdd').textContent = inputLoc
+    document.getElementById('addnewTime').textContent = inputTiming
+
+    window.location.href = '/KFC/HTML/index.html'
+    document.querySelector('.addresspopup').style.display = 'none'
 }
-function addressBack(){
-    document.querySelector('.addresspopup').style.display='none'
-}
-function addressClose(){
-    document.querySelector('.addresspopup').style.display='none'
-}
-function addConfirm(){
-    var inputValue=document.getElementById('pickdel').value;
-    var inputLoc=document.getElementById('addLoc').value;
-    var inputTiming=document.getElementById('asap').value;
-    document.getElementById('newAdd').textContent=inputLoc
-    document.getElementById('addnewTiime').textContent=inputTiming
-    console.log(inputLoc, inputTiming)
-    document.querySelector('.addresspopup').style.display='none'
-}
+ document.getElementById('newAdd').textContent = homeData
+ document.getElementById('addnewTime').textContent = homeTime

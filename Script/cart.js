@@ -28,6 +28,8 @@ function totalPrice() {
     totalsum = gst + res
     document.getElementById('totalSum').textContent = parseInt(total + totalsum)
     document.getElementById('navbar-price').innerText='₹'+parseInt(total+totalsum)+'.00';
+
+    localStorage.setItem('payableAmount', total)
 }
  
 
@@ -218,18 +220,56 @@ function discountdedo(){
       var t=parseInt( document.getElementById('subtotal').textContent)
       var change=(t*3/10)
       document.getElementById('subtotal').textContent=t-change
-      document.getElementById('totalSum').textContent=t-change  
+      document.getElementById('totalSum').textContent=t-change 
+      document.getElementById('navbar-price').innerText='₹'+parseInt(t-change)+'.00';
    }
    
 }
 
 
-var usernameData=JSON.parse(localStorage.getItem('username')) || []
+var usernameData=JSON.parse(localStorage.getItem('username'))
 if(usernameData){
     document.getElementById('navbar-account').textContent=usernameData.name;
 }else{
-    document.getElementById('navbar-account').textContent='Sign In';
+    document.getElementById('navbar-account').innerText='Sign In';
 }
+
+
+
+
+
+function changeAddress() {
+    document.querySelector('.addresspopup').style.display = 'block'
+}
+
+function addressBack() {
+    document.querySelector('.addresspopup').style.display = 'none'
+}
+function addressClose() {
+    document.querySelector('.addresspopup').style.display = 'none'
+}
+
+
+let homeData = JSON.parse(localStorage.getItem('homeAddress')) 
+let homeTime = JSON.parse(localStorage.getItem('homeTiming'))
+document.getElementById('newAdd').textContent = homeData
+document.getElementById('addnewTime').textContent = homeTime
+
+function addConfirm(){
+    var inputLoc = document.getElementById('addLoc').value;
+    var inputTiming = document.getElementById('asap').value;
+
+    localStorage.setItem('homeAddress', JSON.stringify(inputLoc))
+    localStorage.setItem('homeTiming', JSON.stringify(inputTiming))
+
+    document.getElementById('newAdd').textContent = inputLoc
+    document.getElementById('addnewTime').textContent = inputTiming
+
+    // window.location.href = '/KFC/HTML/deals.html'
+    document.querySelector('.addresspopup').style.display = 'none'
+}
+
+
 
 
 

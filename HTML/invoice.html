@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Successful</title>
+     <style>
+    .parent {
+    border: 1px solid #f2f2f5;
+    width: 60%;
+    height: 650px;
+    margin: auto;
+    margin-top: 20px !important;
+    background-image: linear-gradient(to right, rgb(51,63,72), rgb(51,63,72));
+    font-family: Whitney,Helvetica,Arial,sans-serif!important;
+    
+
+}
+#gif {
+     width: 20%;
+    height: 20%;
+    padding-left: 370px;
+}
+.parent >h2 {
+    text-align: center;
+    color:rgb(37, 147, 155);
+    font-weight: bold;
+    margin-top: 5px;
+    
+}
+#link {
+    margin: auto;
+    color: black;
+    font-family: Whitney,Helvetica,Arial,sans-serif!important;
+    text-decoration: none;
+    
+}
+#link>button{
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  width: 13%;
+  height: 30px;
+  background-color: rgb(51,63,72);;
+  color: #f2f2f5;
+  border-radius: 5px;
+}
+.parent>p{
+  text-align: center;
+  color: #f2f2f5;
+}
+#yui{
+  text-align: center;
+}
+#yui p{
+     color: #f2f2f5;
+}
+     </style>
+  </head>
+  <body>
+    <div class="parent">
+        
+      <h2>Payment Successful</h2>
+      <img
+        id="gif"
+        src="https://user-images.githubusercontent.com/12693087/31615154-9c8c4886-b280-11e7-828d-2f64e4250c53.gif"
+      />
+      <br /><br /><br /><br />
+      <h2>Your Order has been Successfully Placed</h2>
+      <p>Order Id :-259373523505</p>
+      <div id="yui">
+
+      </div>
+    </div>
+    <a id="link" href="index.html"><button> Return to Home Page</button></a>
+   
+  </body>
+</html>
+<script>
+
+
+let items=JSON.parse(localStorage.getItem('CartData')) || []
+let amount=JSON.parse(localStorage.getItem('lastAmount')) || 0
+let detail=JSON.parse(localStorage.getItem('userDetails')) || [] 
+  var kite=localStorage.getItem("name1");
+  var tree=localStorage.getItem("cartp");
+  
+    var  p=document.createElement("p");
+    p.textContent="No of Items:"+items.length;
+
+    var pa=document.createElement("p");
+    pa.textContent="Total price:-Rs "+amount;
+
+   
+    var img=document.createElement("img");
+       img.setAttribute("src","https://d1csarkz8obe9u.cloudfront.net/posterpreviews/thank-you-for-shopping-with-us-flyer-design-template-f5c4c2e4ab93f102c46becd8feb1c5b3.jpg?ts=1618347130");
+       img.setAttribute("id","carry");
+
+    document.querySelector("#yui").append(p,pa,img);
+
+
+
+  
+</script>
