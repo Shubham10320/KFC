@@ -2,7 +2,7 @@ let addCartArr = JSON.parse(localStorage.getItem("CartData")) || [];
 
 
 
-var usernameData = JSON.parse(localStorage.getItem('username')) || []
+var usernameData = JSON.parse(localStorage.getItem('username'))
 if (usernameData) {
     document.getElementById('navbar-account').textContent = usernameData.name;
 } else {
@@ -995,7 +995,6 @@ function dealdata(exclusiveDeal) {
 
         box.append(img, name, type, price, des, button);
         document.getElementById("dealproduct").append(box);
-
         button.addEventListener("click", function () {
             if (check(elem.name) === false) {
                 addToCart(elem)

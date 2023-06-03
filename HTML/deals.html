@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/KFC/style/deals.css">
     <link rel="stylesheet" href="/KFC/style/home.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <!-- <link rel="stylesheet" href="/KFC/style/footer.css"> -->
     <title>Today's Deals</title>
 
@@ -64,9 +67,9 @@
     <br><br><br><br><br><br>
 
     <div id="shubhamSecondNav">
-        <p><span><img src="/KFC/footerimg/Find_KFC.svg" alt=""></span>Delivery to:</p>
-        <p><span><img src="/KFC/Images/clock.264bac4c.svg" alt=""></span>ASAP</p>
-        <button>Change</button>
+        <p><span><img src="/KFC/footerimg/Find_KFC.svg" alt=""></span>Delivery to: <span id="newAdd"></span> </p>
+        <p><span><img src="/KFC/Images/clock.264bac4c.svg" alt=""></span>Timing: <span id="addnewTime">ASAP </span></p>
+        <button onclick="changeAddress()">Change</button>
     </div>
 
 
@@ -80,6 +83,99 @@
             <a>Sign In to see exclusive offers & deals</a>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <section id="homepopup">
+        <div class="addresspopup">
+            <div id="pophead">
+                <p onclick="addressBack()"><ion-icon name="arrow-back-outline"></ion-icon></p>
+                <h2>CHANGE YOUR ORDER</h2>
+                <p onclick="addressClose()"><ion-icon name="close-circle-outline"></ion-icon></p>
+            </div>
+            <hr id="popheadHR">
+            
+            <div id="addchange">
+                <label for="">ORDER TYPE</label><br>
+                <div>
+                <input type="text" id="pickdel" value="DELIVERY">
+                <button>EDIT</button>
+            </div>
+               <hr id="popheadHR2">
+            </div>
+
+            <div id="addlocation">
+                <label for="">YOUR LOCATION</label><br>
+                <div>
+                <input type="text" id="addLoc">
+                <button>EDIT</button>
+            </div>
+               <hr id="popheadHR3">
+            </div>
+
+            <label id="scheduleOrderlabel" style="display: block;">SCHEDULE FOR YOUR ORDER</label>
+
+            <div id="scheduleOrder">
+                
+                <br>
+                <div>
+                 <div id="orderone">
+                    <label for="" style="display: block;">Date</label>
+                    <div>
+                        <input type="text" value="Today">
+                    </div>
+                 </div>
+                 <div id="ordertwo">
+                    <label for="">Time</label>
+                    <div>
+                        <select id="asap">
+                            <option value="ASAP">ASAP</option>
+                            <option value="12:30 PM">12:30</option>
+                            <option value="1:30 PM">1:30</option>
+                            <option value="3:30 PM">3:30</option>
+                            <option value="5:30 PM">5:30</option>
+                            <option value="7:00 OM">7:00</option>
+                        </select>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <br><br><br>
+            <button id="homeconfirm" onclick="addConfirm()">CONFIRM</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -223,7 +319,7 @@
 
 
 
-    var usernameData = JSON.parse(localStorage.getItem('username')) || []
+    var usernameData = JSON.parse(localStorage.getItem('username'))
     if (usernameData) {
         document.getElementById('navbar-account').textContent = usernameData.name;
     } else {
@@ -232,11 +328,36 @@
 
 
 
+    function changeAddress() {
+    document.querySelector('.addresspopup').style.display = 'block'
+}
+
+function addressBack() {
+    document.querySelector('.addresspopup').style.display = 'none'
+}
+function addressClose() {
+    document.querySelector('.addresspopup').style.display = 'none'
+}
+let homeData = JSON.parse(localStorage.getItem('homeAddress')) 
+let homeTime = JSON.parse(localStorage.getItem('homeTiming'))
+document.getElementById('newAdd').textContent = homeData
+document.getElementById('addnewTime').textContent = homeTime
+
+function addConfirm(){
+    var inputLoc = document.getElementById('addLoc').value;
+    var inputTiming = document.getElementById('asap').value;
+
+    localStorage.setItem('homeAddress', JSON.stringify(inputLoc))
+    localStorage.setItem('homeTiming', JSON.stringify(inputTiming))
+
+    document.getElementById('newAdd').textContent = inputLoc
+    document.getElementById('addnewTime').textContent = inputTiming
+
+    // window.location.href = '/KFC/HTML/deals.html'
+    document.querySelector('.addresspopup').style.display = 'none'
+}
 
 
 
-
-
-
-    
+ 
 </script>

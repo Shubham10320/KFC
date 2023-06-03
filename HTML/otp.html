@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #btn {
+            margin: 20px;
+            padding: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.692);
+            z-index: -1;
+            opacity: 1;
+            transition: 0s;
+        }
+
+        .showoverlay {
+            opacity: 0;
+            /* z-index: 1; */
+        }
+
+        form {
+            padding: 18px;
+        }
+
+        .login {
+            width: 400px;
+            background-color: rgb(25, 33, 50);
+            /* height: 50vh; */
+            position: absolute;
+            top: 30%;
+            right: 34%;
+            color: grey;
+            transform: translate((-50%, 50%));
+            z-index: 150;
+            /* right: 0px; */
+            transition: 0s;
+            /* top: 0px;  */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            /* position: fixed; */
+        }
+
+        .showlogin {
+            left: -70.5%;
+        }
+
+        #newlog {
+            padding: 20px;
+        }
+
+        .login input {
+            width: 100%;
+            height: 45px;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            border-bottom: 0.5px solid grey;
+        }
+
+        .login input:focus {
+            outline: none;
+        }
+
+        .login input::placeholder {
+            padding: 12px;
+        }
+
+        .login button {
+            width: 101%;
+            background-color: crimson;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            font-size: 17px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .login p {
+            /* margin-top: 25px; */
+            margin-bottom: 20px;
+            color: grey;
+            font-size: 14px;
+        }
+
+        #logo {
+            background-color: rgb(16, 132, 126);
+            display: flex;
+        }
+
+        #logo img {
+            width: 50%;
+            padding: 20px;
+        }
+
+        span {
+            color: grey;
+        }
+
+        #cross {
+            color: black;
+            position: absolute;
+            right: 2px;
+            top: -5px;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            cursor: pointer;
+
+        }
+
+        h3,
+        #number {
+            color: grey;
+        }
+
+        .Container {
+            Display: Flex;
+            Flex-Flow: Column;
+            Height: 100%;
+            Align-Items: Space-Around;
+            Justify-Content: Center;
+        }
+
+        .UserInput {
+            Display: Flex;
+            Justify-Content: Center;
+            gap: 15px
+        }
+
+        input {
+            Margin: 10px;
+            Height: 35px;
+            Width: 65px;
+            border: none;
+            Border-Radius: 5px;
+            Text-Align: Center;
+            Font-Family: Arimo;
+            Font-Size: 1.2rem;
+            Background: rgb(25, 33, 50);
+        }
+
+        .change {
+            margin-top: 10px;
+            margin-bottom: -15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .change p {
+            color: grey;
+        }
+
+        .success {
+            width: 400px;
+            height: 320px;
+            position: absolute;
+            left: -50%;
+            right: 50%;
+            transform: translate(-50%, 50%);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 5px black;
+            background-color: rgba(49, 50, 51, 0.973);
+        }
+
+        .showSuccess {
+            left: 50%;
+        }
+
+        .success div h1 {
+            color: white;
+            display: flex;
+            text-align: center;
+            padding: 55px;
+            margin-top: -50px;
+            /* width: 100%; */
+            /* margin: auto; */
+
+        }
+
+        .success div img {
+            padding: 20px;
+        }
+
+        #danger {
+            width: 60px;
+            height: 60px;
+            color: white;
+            /* padding: 50px; */
+            font-size: 50px;
+            position: absolute;
+            left: 42%;
+            top: 75%;
+            text-align: center;
+            background-color: grey;
+            border-radius: 5px;
+        }
+
+        #danger:hover {
+            background-color: black;
+        }
+
+        section {
+            position: relative;
+        }
+
+        section>#shubhamotp {
+            position: fixed;
+            width: 350px;
+            height: 10vh;
+            top: 10%;
+            left: 41%;
+            background-color: white;
+            border-radius: 20px;
+            color: black;
+            display: none;
+            padding: 20px;
+        }
+        #shubhamotp>#myOTP{
+            margin-top: 10px;
+            text-align: center;
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="login">
+
+        <div id="logo">
+            <span id="cross" onclick="closepopUp()">&times;</span>
+        </div>
+
+        <form action="./index.html" id="form-otp">
+            <div id="newlog">
+                <div class="Container">
+                    <h3>Continue using Phone</h3>
+                    <div class="UserInput">
+                        <Input Type="Text" Id='Ist' Maxlength="1" />
+                        <Input Type="Text" Id="Sec" Maxlength="1" disabled />
+                        <Input Type="Text" Id="Third" Maxlength="1" disabled />
+                        <Input Type="Text" Id="Fourth" Maxlength="1" disabled />
+                    </div>
+                    <div class="change">
+                        <p id="changeTime">Resend OTP <span id="timeStamp"></span></p>
+                    </div>
+
+                </div>
+                <button id="continueBtn" onclick="showpopUp()">Continue</button>
+                <div>
+                    <p style="font-size: 10px;">By clicking continue, you agree with our <span> Privacy Policy</span>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="success">
+        <div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png?dim=256x0" alt="">
+            <h1 id="htag">Login SuccessFully!</h1>
+            <span id="danger" onclick="closepopup()">&times;</span>
+        </div>
+    </div>
+
+
+    <section>
+        <div id="shubhamotp">
+            <h1 id="myOTP"></h1>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    var val = Math.floor(1000 + Math.random() * 9000);
+    console.log(val);
+
+    // alert(`Your 4 Digit OTP is "${val}"`)
+    setTimeout(() => {
+        document.getElementById('myOTP').textContent = 'Your 4 Digit OTP is: ' +val;
+        document.getElementById('shubhamotp').style.display = 'block'
+    }, 0)
+    setTimeout(() => {
+        document.getElementById('myOTP').textContent = 'Your 4 Digit OTP is: ' + val;
+        document.getElementById('shubhamotp').style.display = 'none'
+    }, 5000)
+
+    var userNum = JSON.parse(localStorage.getItem("user-number"));
+    // document.getElementById("number_or").textContent="+91 "+ userNum;
+
+
+    var inputs = document.querySelectorAll("input");
+    var button = document.querySelector("button");
+
+    function closepopUp() {
+        document.querySelector(".overlay").classList.remove("overlay");
+        document.querySelector(".login").classList.add("showlogin");
+    }
+
+    // function showpopUp(){
+    //     document.querySelector(".success").classList.add("showSuccess");
+    // }
+
+    function closepopup() {
+        document.querySelector(".success").classList.remove("showSuccess");
+        var otp = JSON.parse(localStorage.getItem("otp"));
+        var no = JSON.parse(localStorage.getItem("user-number"));
+        if (otp == val) {
+            let num = JSON.parse(localStorage.getItem("login-data")) || ""
+
+        }
+    }
+
+    inputs.forEach((input, index1) => {
+        input.addEventListener("keyup", (e) => {
+
+            var currentInput = input,
+                nextInput = input.nextElementSibling,
+                prevInput = input.previousElementSibling;
+
+            if (currentInput.value.length > 1) {
+                currentInput.value = "";
+                return;
+            }
+
+            if (nextInput && nextInput.hasAttribute("disabled") && currentInput.value !== "") {
+                nextInput.removeAttribute("disabled");
+                nextInput.focus();
+            }
+
+            if (e.key === "Backspace") {
+                inputs.forEach((input, index2) => {
+                    if (index1 <= index2 && prevInput) {
+                        input.setAttribute("disabled", true);
+                        currentInput.value = "";
+                        prevInput.focus();
+                    }
+                })
+            }
+        });
+    });
+
+    window.addEventListener("load", () => inputs[0].focus());
+
+
+
+
+
+    document.querySelector("#form-otp").addEventListener("submit", formS);
+    var arr = []
+    function formS(event) {
+        event.preventDefault();
+        var otp = val;
+        let verify = localStorage.getItem("status") || false
+        console.log(otp, val)
+        localStorage.setItem("otp", JSON.stringify(otp));
+        var one = document.getElementById("Ist").value;
+        var two = document.getElementById("Sec").value;
+        var three = document.getElementById("Third").value;
+        var four = document.getElementById("Fourth").value;
+        var OTP = one + two + three + four;
+
+
+
+        var getOtp = JSON.parse(localStorage.getItem("otp"));
+        if (val != OTP) {
+            document.querySelector(".success").textContent = ""
+            localStorage.setItem("status", false)
+            localStorage.setItem("login-data", "")
+            // alert(`Invalid...!, Your 4 Digit OTP is "${val}"`)
+            setTimeout(() => {
+                document.getElementById('myOTP').textContent = `Invalid...!, Your 4 Digit OTP is "${val}"`
+                document.getElementById('shubhamotp').style.display = 'block'
+            }, 0)
+            return
+        } else {
+            let verify = localStorage.getItem("user-number")
+            localStorage.setItem("login-data", verify)
+            localStorage.setItem("status", true)
+            window.location.href='/KFC/HTML/invoice.html'
+        }
+    }
+</script>
