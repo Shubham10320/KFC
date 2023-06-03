@@ -1725,17 +1725,17 @@ totalPrice()
 
 
 document.getElementById('navbar-menu').addEventListener('click', function () {
-    location.href = '/KFC/HTML/product.html';
+    location.href = './product.html';
 })
 document.getElementById('navbar-about').addEventListener('click', function () {
-    location.href = '/KFC/HTML/deals.html';
+    location.href = './deals.html';
 })
 document.getElementById('navbar-account').addEventListener('click', function () {
-    location.href = '/KFC/HTML/signup.html';
+    location.href = './signup.html';
 })
 document.getElementById('navbar-cart-bucket').addEventListener('click', function () {
-    location.href = '/KFC/HTML/cart.html';
+    location.href = './cart.html';
 })
 document.getElementById('navbar-kfc-logo').addEventListener('click', function () {
-    location.href = '/KFC/HTML/index.html';
+    location.href = '../index.html';
 })

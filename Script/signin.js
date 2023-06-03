@@ -79,7 +79,7 @@ var attempt = localStorage.getItem("attempt") || 0;
                 
                 if (inpt[0].value == otp.d1 && inpt[1].value == otp.d2 && inpt[2].value == otp.d3 && inpt[3].value == otp.d4) {
                     //document.getElementById("signin").getElementsByTagName("span")[1].remove();
-                    window.location.href = "http://www.w3schools.com";
+                    window.location.href = "../index.html";
                 }
                 else {
                     localStorage.setItem("attempt", Number(attempt) + 1);
