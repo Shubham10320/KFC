@@ -910,10 +910,11 @@ function match(match_day) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+             
         })
     })
 }
@@ -954,10 +955,11 @@ function periperidata(periperi) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+           
         })
     })
 }
@@ -999,10 +1001,11 @@ function dealdata(exclusiveDeal) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+
         })
     })
 }
@@ -1043,10 +1046,11 @@ function chickendata(chicken_bucket) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+        
         })
     })
 }
@@ -1088,10 +1092,11 @@ function legdata(leg_Piece) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+            
         })
     })
 }
@@ -1131,10 +1136,11 @@ function rolldata(roll) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+        
         })
     })
 }
@@ -1176,10 +1182,11 @@ function lunchdata(new_lunch) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+            
         })
     })
 }
@@ -1221,10 +1228,11 @@ function biryanidata(biryani_bucket) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+        
         })
     })
 }
@@ -1265,10 +1273,11 @@ function boxdata(box_meal) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+        
         })
     })
 }
@@ -1310,10 +1319,11 @@ function burgerdata(burger) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+            
         })
     })
 }
@@ -1354,10 +1364,11 @@ function snacksdata(snacks) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+            
         })
     })
 }
@@ -1398,10 +1409,12 @@ function beveragesdata(beverages) {
             if (check(elem.name) === false) {
                 addToCart(elem)
                 showPopUP()
+                totalPrice(elem);
             } else {
                 hidePopUp()
             }
-            totalPrice();
+        
+            
         })
     })
 }
@@ -1709,19 +1722,26 @@ function check(name) {
     }
 }
 
-let valueofPrice = 0;
+let paisa = 0;
 
 let allPrice = JSON.parse(localStorage.getItem("CartData")) || [];
-function totalPrice() {
+function totalPaisa() {
     allPrice.forEach(function (elem) {
         console.log(elem.price)
-        valueofPrice += parseInt(elem.price);
-        
+        paisa += parseInt(elem.price);
+        console.log(paisa)
     })
-    document.getElementById('navbar-price').innerText = '₹' + valueofPrice + '.00';
+    document.getElementById('navbar-price').innerText = '₹' + paisa + '.00';
 }
 
-totalPrice()
+ totalPaisa()
+
+let valueofPrice=0;
+function totalPrice(elem){
+    valueofPrice+=parseInt(elem.price)
+    document.getElementById('navbar-price').innerText = '₹' + valueofPrice + '.00';
+}
+// document.getElementById('navbar-price').innerText = '₹' + valueofPrice + '.00';
 
 
 document.getElementById('navbar-menu').addEventListener('click', function () {
