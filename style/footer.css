@@ -118,7 +118,7 @@ footer{
   #footerThreeSection #firstfooterSection{
     margin: auto;
     width: 80%;
-    border: 3px solid crimson;
+    /* border: 3px solid crimson; */
   }
   #allsection{
     display: grid;
@@ -162,7 +162,7 @@ footer{
     width: 79%;
     margin: auto;
     display: grid;
-    border: 3px solid crimson;
+    /* border: 3px solid crimson; */
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-top: 25px;
@@ -202,7 +202,7 @@ footer{
         width: 79%;
         margin: auto;
         display: grid;
-        border: 3px solid crimson;
+        /* border: 3px solid crimson; */
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
         margin-top: 25px;
