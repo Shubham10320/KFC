@@ -343,3 +343,18 @@ section{
 }
 
 
+#humdege{
+    position: relative;
+}
+#humdege #maidunga{
+    position: fixed;
+    width: 400px;
+    top: 15%;
+    left:35%;
+    background-color: rgb(34, 31, 31);
+    border-radius: 30px;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    display: none;
+}

@@ -705,7 +705,16 @@ let beverages = [
         type: "Veg",
         price: "60.00",
         des: "Mirinda Can 330 ml"
-    }]
+    },
+    {
+        image: "https://edtimes.in/wp-content/uploads/2022/02/photo-1628340814848-17c9d6ba00b9-1.jpg",
+        name: "Thumps Up Can 250 ml",
+        type: "Veg",
+        price: "85.00",
+        des: "Thumps Up Can 250 ml, comes in 350 and 450 ml",
+    
+    }
+]
 
 
 function priceSort() {
