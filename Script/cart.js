@@ -216,7 +216,13 @@ document.getElementById('applyDiscountButton').addEventListener('click', functio
 function discountdedo(){
    var inputVal=document.getElementById('discountField').value 
    if(inputVal==='masai30'){
-      document.getElementById('headingshubhamchaubey').textContent='Applied Coupon Successfully'
+    //   document.getElementById('headingshubhamchaubey').textContent='Applied Coupon Successfully'
+      setTimeout(()=>{
+        document.getElementById('maidunga').style.display='block'
+      },0)
+      setTimeout(()=>{
+        document.getElementById('maidunga').style.display='none'
+      },3000)
       var t=parseInt( document.getElementById('subtotal').textContent)
       var change=(t*3/10)
       document.getElementById('subtotal').textContent=t-change
